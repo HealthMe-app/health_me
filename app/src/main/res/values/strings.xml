@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">HealthMe+</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Welcome</string>
+    <string name="password">Пароль</string>
+    <string name="entry">Вход</string>
+    <string name="about_account_question">Нет аккаунта?</string>
+    <string name="offer_to_register">Зарегистрируйтесь</string>
+    <string name="authorization">Вход</string>
+    <string name="registration">Регистрация</string>
+    <string name="prompt_email">Email</string>
+    <string name="welcome_in">Добро пожаловать в</string>
+
 </resources>

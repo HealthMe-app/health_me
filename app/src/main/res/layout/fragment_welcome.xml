@@ -1,13 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:soundEffectsEnabled="true"
+    android:touchscreenBlocksFocus="true">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/welcome_in"
+            android:textColor="@color/birch"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/dark_birch"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_cat_jessica_in_circle"
+            android:layout_marginTop="43dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goToRegistration"
+            style="@style/AuthorizationButtonStyle"
+            android:text="@string/registration"
+            android:textAllCaps="false"
+            android:layout_marginTop="60dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goToAuthorization"
+            style="@style/AuthorizationButtonStyleWhite"
+            android:text="@string/authorization"
+            android:textAllCaps="false"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
 </FrameLayout>

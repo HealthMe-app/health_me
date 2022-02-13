@@ -3,6 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_btn_authorization.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_btn_calendar.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_checked_btn_calendar.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_et_dialog.xml" value="0.264" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_cat_jessica_in_circle.xml" value="0.1" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_cursor.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/selector_bg_btn_calendar.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_calendar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_dict.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_tracker.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_welcome.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_dict.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
