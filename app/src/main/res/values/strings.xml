@@ -10,5 +10,10 @@
     <string name="registration">Регистрация</string>
     <string name="prompt_email">Email</string>
     <string name="welcome_in">Добро пожаловать в</string>
+    <string name="name">Ваше имя</string>
+    <string name="gender">Пол</string>
+    <string name="dateOfBirth">Дата рождения</string>
+    <string name="have_account">Уже есть аккаунт?</string>
+    <string name="offer_to_enter">Войдите</string>
 
 </resources>
