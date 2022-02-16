@@ -15,5 +15,6 @@
     <string name="dateOfBirth">Дата рождения</string>
     <string name="have_account">Уже есть аккаунт?</string>
     <string name="offer_to_enter">Войдите</string>
+    <string name="ic_jessica_in_mask_description">The picture shows a white cat with a medical mask.</string>
 
 </resources>
