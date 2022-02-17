@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_frame_registration.xml" value="0.162" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_registration.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2355" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_btn_authorization.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_btn_calendar.xml" value="0.2595" />
