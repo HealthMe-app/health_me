@@ -40,16 +40,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="195dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="617dp"
-        android:background="@drawable/bg_frame_registration"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
-
-
     <ImageView
         android:id="@+id/imageJessicaInMaskRegistration"
         android:layout_width="match_parent"
@@ -58,89 +48,138 @@
         app:layout_constraintTop_toBottomOf="@+id/healthMeRegistration"
         app:srcCompat="@drawable/ic_jessica_in_mask" />
 
-    <EditText
-        android:id="@+id/registrationName"
-        style="@style/EdittextStyle"
-        android:layout_marginTop="34dp"
-        android:hint="@string/name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageJessicaInMaskRegistration" />
-
-    <EditText
-        android:id="@+id/registrationEmail"
-        style="@style/EdittextStyle"
-        android:layout_marginTop="20dp"
-        android:hint="@string/prompt_email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrationName" />
-
-    <EditText
-        android:id="@+id/registrationPassword"
-        style="@style/EdittextStyle"
-        android:layout_marginTop="20dp"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrationEmail" />
-
-    <EditText
-        android:id="@+id/registrationGender"
-        style="@style/EdittextStyle"
-        android:layout_marginTop="20dp"
-        android:hint="@string/gender"
-        android:inputType="textCapSentences"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrationPassword" />
-
-    <EditText
-        android:id="@+id/registrationDateOfBirth"
-        style="@style/EdittextStyle"
-        android:layout_marginTop="20dp"
-        android:hint="@string/dateOfBirth"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrationGender" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnRegistration"
-        style="@style/AuthorizationButtonStyle"
-        android:layout_marginTop="34dp"
-        android:text="@string/registration"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrationDateOfBirth" />
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistration">
+        android:background="@drawable/bg_frame_registration"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
 
-        <TextView
-            android:id="@+id/haveAccount"
+        <EditText
+            android:id="@+id/registrationName"
+            style="@style/EdittextStyle"
+            android:layout_gravity="center"
+            android:layout_marginTop="34dp"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageJessicaInMaskRegistration" />
+
+        <EditText
+            android:id="@+id/registrationEmail"
+            style="@style/EdittextStyle"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registrationName" />
+
+        <EditText
+            android:id="@+id/registrationPassword"
+            style="@style/EdittextStyle"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registrationEmail" />
+
+        <FrameLayout
+            android:id="@+id/layoutGender"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_et_dialog"
+            android:elevation="1dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registrationPassword">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/gender"
+                android:textColor="@color/dark_birch" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/ic_arrow_red" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/layoutDateOfBirth"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_et_dialog"
+            android:elevation="1dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutGender">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/dateOfBirth"
+                android:textColor="@color/dark_birch" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/ic_arrow_red" />
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegistration"
+            style="@style/AuthorizationButtonStyle"
+            android:layout_gravity="center"
+            android:layout_marginTop="34dp"
+            android:text="@string/registration"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutDateOfBirth" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/have_account"
-            android:textColor="@color/birch"
-            android:textSize="18sp" />
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegistration">
 
-        <TextView
-            android:id="@+id/offerEnter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/offer_to_enter"
-            android:textColor="@color/db_text"
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/haveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/have_account"
+                android:textColor="@color/birch"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/offerEnter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/offer_to_enter"
+                android:textColor="@color/db_text"
+                android:textSize="18sp" />
+        </LinearLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

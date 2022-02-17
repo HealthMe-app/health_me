@@ -16,5 +16,17 @@
     <string name="have_account">Уже есть аккаунт?</string>
     <string name="offer_to_enter">Войдите</string>
     <string name="ic_jessica_in_mask_description">The picture shows a white cat with a medical mask.</string>
+    <string name="to_do_question">Что вы хотите сделать?</string>
+    <string name="add_appointment">Добавить запись на приём</string>
+    <string name="add_symptom">Добавить симптом</string>
+    <string name="closest_appointments">Ближайшие записи</string>
+    <string name="null_closest_appointments">У вас нет записей на ближайшие 3 дня</string>
+    <string name="appointments">Записи на приём</string>
+    <string name="timeline">График посещений</string>
+    <string name="personalData">Личные данные</string>
+    <string name="security">Безопасность и вход</string>
+    <string name="notification">Уведомления</string>
+    <string name="exit">Выйти из аккаунта</string>
+
 
 </resources>

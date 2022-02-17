@@ -12,4 +12,8 @@
     <color name="birch">#75A29F</color>
     <color name="db_text">#003842</color>
     <color name="ultralight_birch">#DAEDE7</color>
+    <color name="dark_pink">#C06471</color>
+    <color name="light_pink">#F0D3C1</color>
+    <color name="dp_text">#003842</color>
+    <color name="line">#BDBDBD</color>
 </resources>
