@@ -28,7 +28,7 @@
         app:srcCompat="@drawable/ic_cat_jessica"
         tools:ignore="ImageContrastCheck" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <ImageView
         android:id="@+id/btnEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,161 +37,169 @@
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/ic_edit"
-        app:backgroundTint="@color/dark_birch"
         app:layout_constraintBottom_toBottomOf="@+id/imageCircleForCat"
-        app:layout_constraintEnd_toEndOf="@+id/imageCircleForCat"
-        app:tint="@android:color/white" />
+        app:layout_constraintEnd_toEndOf="@+id/imageCircleForCat" />
 
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/frameProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="55dp"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="18dp"
         app:layout_constraintTop_toBottomOf="@+id/imageCircleForCat">
 
-        <FrameLayout
-            android:id="@+id/frameProfile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="18dp">
 
-            <ImageView
-                android:id="@+id/imageProfile"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="20dp"
-                app:srcCompat="@drawable/ic_profile" />
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_profile" />
 
-            <TextView
-                android:id="@+id/personalData"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="64dp"
-                android:text="@string/personalData"
-                android:textColor="@color/dark_birch"
-                android:textSize="18sp" />
+        <TextView
+            android:id="@+id/personalData"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="44dp"
+            android:gravity="center"
+            android:text="@string/personalData"
+            android:textColor="@color/dark_birch"
+            android:textSize="18sp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_marginEnd="20dp"
-                app:srcCompat="@drawable/ic_arrow" />
-
-        </FrameLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            app:srcCompat="@drawable/ic_arrow" />
 
         <View
-            android:layout_width="275dp"
+            android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
             android:background="@color/line" />
 
-        <FrameLayout
-            android:id="@+id/frameSecurity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="18dp">
+    </FrameLayout>
 
-            <ImageView
-                android:id="@+id/imageSecurity"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="20dp"
-                app:srcCompat="@drawable/ic_security" />
 
-            <TextView
-                android:id="@+id/security"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="64dp"
-                android:text="@string/security"
-                android:textColor="@color/dark_birch"
-                android:textSize="18sp" />
+    <FrameLayout
+        android:id="@+id/frameSecurity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/frameProfile">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_marginEnd="20dp"
-                app:srcCompat="@drawable/ic_arrow" />
 
-        </FrameLayout>
+        <ImageView
+            android:id="@+id/imageSecurity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_security" />
+
+        <TextView
+            android:id="@+id/security"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="44dp"
+            android:gravity="center"
+            android:text="@string/security"
+            android:textColor="@color/dark_birch"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            app:srcCompat="@drawable/ic_arrow" />
 
         <View
-            android:layout_width="275dp"
+            android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
             android:background="@color/line" />
 
-        <FrameLayout
-            android:id="@+id/frameNotification"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="18dp">
+    </FrameLayout>
 
-            <ImageView
-                android:id="@+id/imageNotification"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="20dp"
-                app:srcCompat="@drawable/ic_notification" />
 
-            <TextView
-                android:id="@+id/notification"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="64dp"
-                android:text="@string/notification"
-                android:textColor="@color/dark_birch"
-                android:textSize="18sp" />
+    <FrameLayout
+        android:id="@+id/frameNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/frameSecurity">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_marginEnd="20dp"
-                app:srcCompat="@drawable/ic_arrow" />
+        <ImageView
+            android:id="@+id/imageNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_notification" />
 
-        </FrameLayout>
+        <TextView
+            android:id="@+id/notification"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="44dp"
+            android:gravity="center"
+            android:text="@string/notification"
+            android:textColor="@color/dark_birch"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            app:srcCompat="@drawable/ic_arrow" />
 
         <View
-            android:layout_width="275dp"
+            android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
             android:background="@color/line" />
 
-        <FrameLayout
-            android:id="@+id/frameExit"
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/frameNotification">
+
+        <ImageView
+            android:id="@+id/imageExit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_exit" />
+
+        <TextView
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="44dp"
+            android:gravity="center"
+            android:text="@string/exit"
+            android:textColor="@color/dark_birch"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            app:srcCompat="@drawable/ic_arrow" />
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="18dp">
+            android:layout_height="0.5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:background="@color/line" />
 
-            <ImageView
-                android:id="@+id/imageExit"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="20dp"
-                app:srcCompat="@drawable/ic_exit" />
+    </FrameLayout>
 
-            <TextView
-                android:id="@+id/exit"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="64dp"
-                android:text="@string/exit"
-                android:textColor="@color/dark_birch"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_marginEnd="20dp"
-                app:srcCompat="@drawable/ic_arrow" />
-
-        </FrameLayout>
-
-    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
