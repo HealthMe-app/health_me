@@ -54,4 +54,40 @@
         <item name="android:layout_marginVertical">20dp</item>
     </style>
 
+    <style name="CalendarSettingsButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_btn_calendar_settings</item>
+
+    </style>
+
+    <style name="CalendarSettingsButtonStyleCancel" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_btn_calendar_settings_cancel</item>
+    </style>
+
+    <style name="textCalendarSettingsStyle">
+        <item name="android:textColor">@color/dark_birch</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="textCalendarSettingsDoctorStyle">
+        <item name="android:textColor">@color/dark_birch</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="EdittextCalendarStyle" parent="Widget.AppCompat.EditText">
+
+        <item name="android:background">@drawable/bg_et_dialog</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:paddingVertical">5dp</item>
+        <item name="android:paddingHorizontal">5dp</item>
+        <item name="android:textColor">@color/dark_birch</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textCursorDrawable">@drawable/ic_cursor</item>
+    </style>
+
+    <style name="CardViewCalendarSettingsStyle">
+        <item name="android:background">@drawable/bg_layout_calendar_settings</item>
+        //////////////скорее всего удалю, надеюсь не забыла..../////
+    </style>
 </resources>

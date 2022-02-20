@@ -3,49 +3,45 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_btn_save.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_calendar.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_dialog_fragment.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_dict_row.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_frame_calendar.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_frame_registration.xml" value="0.162" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_iv_dict.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_profile.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_recycler_row.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_add.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_arrow.xml" value="0.1585" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_arrow_red.xml" value="0.1585" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_cat_jessica.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_cat_jessica_in_circle.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_circle.xml" value="0.1585" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_cursor.xml" value="0.2515" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_edit.xml" value="0.1585" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_exit.xml" value="0.1585" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_heart.xml" value="0.1585" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_notification.xml" value="0.1585" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_to_calendar_btn.xml" value="0.1585" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_to_tracker_btn.xml" value="0.1585" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_calendar.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_dict.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_home.xml" value="0.264" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_profile_settings.xml" value="0.1" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_registration.xml" value="0.2" />
-        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/medicine_recycler_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2355" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_btn_authorization.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_btn_calendar.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_btn_calendar_settings.xml" value="0.2355" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_btn_calendar_settings_cancel.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_btn_save.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_calendar.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_calendar_recommended_settings_bottom.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_calendar_recommended_settings_top.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_checked_btn_calendar.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_dialog_fragment.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_et_dialog.xml" value="0.264" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_frame_calendar.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_frame_registration.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_layout_calendar_settings.xml" value="0.2355" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_profile.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_recycler_row.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_arrow.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_arrow_up.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_arrow_up_red.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_button_plus.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_calendar.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_calendar_selected.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_cat_jessica_in_circle.xml" value="0.1" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_cursor.xml" value="0.2595" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_jessica_in_mask.xml" value="0.2355" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2355" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_plus_white.xml" value="0.231" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_search.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/selector_bg_btn_calendar.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/selector_bg_registration.xml" value="0.2355" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_calendar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_calendar_settings.xml" value="0.264" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_dict.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_profile_settings.xml" value="0.4" />
+        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_recommended_settings.xml" value="0.264" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_registration.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_tracker.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_welcome.xml" value="0.25416666666666665" />
