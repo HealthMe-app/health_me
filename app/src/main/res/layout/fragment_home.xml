@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="10dp"
-        android:background="@drawable/bg_profile"
+        android:background="@drawable/bg_ulight_birch_13"
         android:orientation="horizontal"
         android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,9 +54,7 @@
                 android:text="Возраст: 20 лет"
                 android:textColor="@color/birch"
                 android:textSize="14sp" />
-
         </LinearLayout>
-
     </LinearLayout>
 
     <TextView
@@ -78,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_dialog_fragment"
+        android:background="@drawable/bg_gray_20"
         android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:background="@drawable/bg_btn_save"
+            android:background="@drawable/bg_dark_pink_10"
             android:padding="10dp"
             android:src="@drawable/ic_to_calendar_btn" />
 
@@ -111,7 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_dialog_fragment"
+        android:background="@drawable/bg_gray_20"
         android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -131,7 +128,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:background="@drawable/bg_btn_save"
+            android:background="@drawable/bg_dark_pink_10"
             android:padding="11dp"
             android:src="@drawable/ic_to_tracker_btn" />
 
@@ -143,7 +140,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:background="@drawable/bg_recycler_row"
+        android:background="@drawable/bg_light_pink_13"
         android:elevation="1dp"
         android:paddingVertical="10sp"
         app:layout_constraintEnd_toEndOf="parent"

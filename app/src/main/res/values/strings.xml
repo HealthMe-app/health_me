@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">HealthMe+</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home">Домашняя страница</string>
+    <string name="calendar">Календарь</string>
+    <string name="dict">Справочник</string>
+    <string name="tracker">Трекер</string>
+    <string name="settings">Настройки</string>
     <string name="hello_blank_fragment">Welcome</string>
     <string name="password">Пароль</string>
     <string name="entry">Вход</string>
@@ -40,20 +44,11 @@
     <string name="doctors">Врачи</string>
     <string name="survey">Обследования</string>
     <string name="vaccination">Прививки</string>
-    <string name="gynecologist">Гинеколог</string>
-    <string name="ophthalmologist">Офтальмолог</string>
-    <string name="one_month">1 мес</string>
-    <string name="date090921">09.09.21</string>
     <string name="ic_doctors_description">The picture shows a doctor.</string>
     <string name="ic_arrow_description">The picture shows a closed arrow.</string>
     <string name="ic_survey_description">The picture shows a fluorography of a person.</string>
     <string name="ic_vaccination_description">The picture shows a vaccine.</string>
     <string name="ic_plus_description">The picture shows a plus.</string>
     <string name="ic_cross_description">The picture shows a cross.</string>
-    <string name="six_month">6 мес</string>
     <string name="ic_dot_description">The figure shows a dot.</string>
-    <string name="lor">ЛОР</string>
-    <string name="dentist">Стоматолог</string>
-
-
 </resources>

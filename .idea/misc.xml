@@ -53,12 +53,77 @@
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_registration.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_tracker.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_welcome.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/bg_birch_stroke_10.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_birch_stroke_gray_10.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_btn_authorization.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_btn_calendar.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_btn_calendar_checked.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_btn_calendar_settings_cancel.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_btn_save.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_calendar.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_calendar_recommended_settings_bottom.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_calendar_recommended_settings_top.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_checked_btn_calendar.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_dark_birch_10.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_dialog_fragment.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_et_dialog.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_frame_calendar.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_frame_registration.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_layout_calendar_settings.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_lp_13.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_profile.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_recycler_row.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_arrow.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_arrow_bottom.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_arrow_red.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_arrow_up.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_arrow_up_red.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_calendar.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_calendar_selected.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_cat_jessica.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_cat_jessica_in_circle.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_cat_jessica_in_mask.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_circle.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_cross.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_cursor.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_doctor.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_dot.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_edit.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_exit.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_heart.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_notification.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_plus.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_profile.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_security.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_settings.xml" value="0.1085" />
+        <entry key="app/src/main/res/drawable/ic_splash.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_stethoscope.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_stethoscope_select.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_to_calendar_btn.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_vaccination.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/selector_bg_birch_10.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/selector_bg_birch_stroke_10.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/selector_bg_btn_calendar.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/selector_calendar.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/selector_dict.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/selector_home.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/selector_tracker.xml" value="0.116" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17037037037037037" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_calendar_settings.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_dict.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.17037037037037037" />
+        <entry key="app/src/main/res/layout/fragment_profile_settings.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_recommended_settings.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_tracker.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/row_calendar_settings.xml" value="0.19375" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.19375" />
+        <entry key="app/src/main/res/menu/settings_menu.xml" value="0.19375" />
       </map>
     </option>
   </component>

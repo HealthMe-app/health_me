@@ -1,436 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/chemise_pink">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:background="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-16dp">
-
-        <TextView
-            android:id="@+id/calendarSettings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="@string/calendar_settings"
-            android:textColor="@color/dark_birch"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.192"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </android.support.constraint.ConstraintLayout>
-
     <TextView
         android:id="@+id/calendarSettingsExplanation"
-        android:layout_width="299dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:gravity="center_horizontal|top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
         android:text="@string/fr_calendar_settings_explanation"
         android:textColor="@color/dark_pink"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnWatchCalendarSettings"
-        style="@style/CalendarSettingsButtonStyle"
-        android:layout_width="341dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
+        android:id="@+id/toRecommendationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_dark_pink_10"
+        android:padding="10dp"
         android:text="@string/watch_recommended_settings"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarSettingsExplanation"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/calendarSettingsExplanation" />
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="444dp"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/bg_layout_calendar_settings"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/btnWatchCalendarSettings">
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/bg_gray_top25"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingVertical="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toRecommendationBtn">
 
         <FrameLayout
             android:id="@+id/frameDoctors"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/imageDoctor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="1dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/ic_doctor"
-                    android:contentDescription="@string/ic_doctors_description" />
-
-                <TextView
-                    android:id="@+id/textDoctors"
-                    style="@style/textCalendarSettingsStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/doctors"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageDoctor"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/doctorsArrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.983"
-                    app:layout_constraintStart_toEndOf="@+id/textDoctors"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_arrow_bottom"
-                    android:contentDescription="@string/ic_arrow_description" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </FrameLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/listOfDoctors"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/frameDoctors">
-
-            <TextView
-                android:id="@+id/firstDoctor"
-                style="@style/textCalendarSettingsDoctorStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="1dp"
-                android:layout_marginTop="12dp"
-                android:text="@string/gynecologist"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/firstDoctorInterval"
-                style="@style/EdittextCalendarStyle"
-                android:layout_width="80dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="4dp"
-                android:autofillHints="@string/one_month"
-                android:drawableRight="@drawable/ic_arrow_red"
-                android:gravity="center"
-                android:inputType="text"
-                android:text="@string/one_month"
-                app:layout_constraintStart_toEndOf="@+id/firstDoctor"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="LabelFor,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
-
-            <EditText
-                android:id="@+id/firstDoctorDate"
-                style="@style/EdittextCalendarStyle"
-                android:layout_width="105dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:autofillHints="@string/date090921"
-                android:drawableRight="@drawable/ic_arrow_red"
-                android:gravity="center"
-                android:inputType="date"
-                android:text="@string/date090921"
-                app:layout_constraintStart_toEndOf="@+id/firstDoctorInterval"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="LabelFor,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="30dp"
+            android:paddingVertical="15dp">
 
             <ImageView
-                android:id="@+id/firstDoctorCross"
+                android:id="@+id/imageDoctor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/firstDoctorDate"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.181"
-                app:srcCompat="@drawable/ic_cross"
-                android:contentDescription="@string/ic_cross_description" />
+                android:contentDescription="@string/ic_doctors_description"
+                android:src="@drawable/ic_doctor" />
 
             <TextView
-                android:id="@+id/secondDoctor"
-                style="@style/textCalendarSettingsDoctorStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="1dp"
-                android:text="@string/ophthalmologist"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/firstDoctor"
-                app:layout_constraintVertical_bias="0.644" />
-
-            <EditText
-                android:id="@+id/secondDoctorInterval"
-                style="@style/EdittextCalendarStyle"
-                android:layout_width="80dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="12dp"
-                android:drawableRight="@drawable/ic_arrow_red"
-                android:gravity="center"
-                android:inputType="text"
-                android:text="@string/one_month"
-                app:layout_constraintStart_toEndOf="@+id/secondDoctor"
-                app:layout_constraintTop_toBottomOf="@+id/firstDoctorInterval"
-                tools:ignore="LabelFor,TouchTargetSizeCheck"
-                android:autofillHints="@string/one_month" />
-
-            <EditText
-                android:id="@+id/secondDoctorDate"
-                style="@style/EdittextCalendarStyle"
-                android:layout_width="105dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                android:drawableRight="@drawable/ic_arrow_red"
-                android:gravity="center"
-                android:inputType="date"
-                android:text="@string/date090921"
-                app:layout_constraintStart_toEndOf="@+id/secondDoctorInterval"
-                app:layout_constraintTop_toBottomOf="@+id/firstDoctorDate"
-                tools:ignore="LabelFor,TouchTargetSizeCheck"
-                android:autofillHints="@string/date090921" />
+                android:id="@+id/textDoctors"
+                style="@style/textCalendarSettingsStyle"
+                android:text="@string/doctors" />
 
             <ImageView
-                android:id="@+id/secondDoctorCross"
+                android:id="@+id/arrowDoctors"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/secondDoctorDate"
-                app:layout_constraintTop_toBottomOf="@+id/firstDoctorCross"
-                app:srcCompat="@drawable/ic_cross"
-                android:contentDescription="@string/ic_cross_description" />
-        </android.support.constraint.ConstraintLayout>
-
-        <View
-            android:id="@+id/firstLine"
-            android:layout_width="350dp"
-            android:layout_height="0.5dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@color/line"
-            android:layout_marginTop="14dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/listOfDoctors" />
-
-        <FrameLayout
-            android:id="@+id/frameSurvey"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/firstLine">
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/imageSurvey"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/ic_survey_description"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textSurvey"
-                    app:layout_constraintHorizontal_bias="0.047"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/ic_survey" />
-
-                <TextView
-                    android:id="@+id/textSurvey"
-                    style="@style/textCalendarSettingsStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="160dp"
-                    android:text="@string/survey"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/surveyArrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/ic_arrow_description"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.981"
-                    app:layout_constraintStart_toEndOf="@+id/textSurvey"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.515"
-                    app:srcCompat="@drawable/ic_arrow" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_gravity="end|center_vertical"
+                android:contentDescription="@string/ic_arrow_description"
+                android:src="@drawable/ic_arrow" />
         </FrameLayout>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDoctors"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
         <View
-            android:id="@+id/secondLine"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="14dp"
-            android:background="@color/line"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/frameSurvey" />
+            android:layout_marginHorizontal="30dp"
+            android:background="@color/line" />
 
         <FrameLayout
-            android:id="@+id/frameVaccination"
-            android:layout_width="350dp"
+            android:id="@+id/frameSurveys"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/secondLine">
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="30dp"
+            android:paddingVertical="15dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageSurveys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ic_doctors_description"
+                android:src="@drawable/ic_survey" />
 
-                <ImageView
-                    android:id="@+id/imageVaccination"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="1dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textVaccination"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_vaccination"
-                    android:contentDescription="@string/ic_vaccination_description" />
+            <TextView
+                android:id="@+id/textSurveys"
+                style="@style/textCalendarSettingsStyle"
+                android:text="@string/survey" />
 
-                <TextView
-                    android:id="@+id/textVaccination"
-                    style="@style/textCalendarSettingsStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/vaccination"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.12"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <ImageView
-                    android:id="@+id/vaccinationArrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.986"
-                    app:layout_constraintStart_toEndOf="@+id/textVaccination"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_arrow"
-                    android:contentDescription="@string/ic_arrow_description" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/arrowSurveys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:contentDescription="@string/ic_arrow_description"
+                android:src="@drawable/ic_arrow" />
         </FrameLayout>
-    </android.support.constraint.ConstraintLayout>
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewSurveys"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
 
-        <ImageView
-            android:id="@+id/imageHomeCalendarSettings"
-            android:layout_width="44dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="52dp"
-            android:contentDescription="@string/ic_home_description"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_home" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginHorizontal="30dp"
+            android:background="@color/line" />
 
-        <ImageView
-            android:id="@+id/imageCalendarSettings"
-            android:layout_width="42dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="48dp"
-            android:contentDescription="@string/ic_calendar_description"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageHomeCalendarSettings"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_calendar_selected" />
+        <FrameLayout
+            android:id="@+id/frameProcedures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="30dp"
+            android:paddingVertical="15dp">
 
-        <ImageView
-            android:id="@+id/imageSearchCalendarSettings"
-            android:layout_width="41dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="48dp"
-            android:contentDescription="@string/ic_search_description"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageCalendarSettings"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_search" />
+            <ImageView
+                android:id="@+id/imageVaccinations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ic_doctors_description"
+                android:src="@drawable/ic_vaccination" />
 
-        <ImageView
-            android:id="@+id/imageStethoscopeCalendarSettings"
-            android:layout_width="43dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="4dp"
-            android:contentDescription="@string/ic_stethoscope_description"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageSearchCalendarSettings"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_stethoscope" />
-    </android.support.constraint.ConstraintLayout>
+            <TextView
+                android:id="@+id/textVaccinations"
+                style="@style/textCalendarSettingsStyle"
+                android:text="@string/vaccination" />
+
+            <ImageView
+                android:id="@+id/arrowVaccinations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:contentDescription="@string/ic_arrow_description"
+                android:src="@drawable/ic_arrow" />
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewVaccinations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnPlus"
+        android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:layout_marginBottom="12dp"
-        android:src="@drawable/ic_plus_white"
-        app:maxImageSize="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_add"
         app:backgroundTint="@color/dark_pink"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/ic_plus_description" />
-</android.support.constraint.ConstraintLayout>
+        app:tint="@android:color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
