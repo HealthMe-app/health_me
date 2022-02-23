@@ -124,6 +124,8 @@
         <entry key="app/src/main/res/layout/row_calendar_settings.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/settings_menu.xml" value="0.19375" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>
