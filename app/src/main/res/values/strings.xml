@@ -51,4 +51,15 @@
     <string name="ic_plus_description">The picture shows a plus.</string>
     <string name="ic_cross_description">The picture shows a cross.</string>
     <string name="ic_dot_description">The figure shows a dot.</string>
+    <string name="add_medicine">Добавить приём лекарств</string>
+    <string name="date_and_time">Дата и время</string>
+    <string name="name_of_medicine">Название препарата</string>
+    <string name="note">Заметка</string>
+    <string name="select_symptom">Выберите симптом</string>
+    <string name="add_new_symptom">Добавить новый симптом</string>
+    <string name="title">Название</string>
+    <string name="further">Далее</string>
+    <string name="symptom_cough">Симптом: кашель</string>
+    <string name="dry">Сухой</string>
+    <string name="wet">Влажный</string>
 </resources>
