@@ -62,4 +62,13 @@
     <string name="symptom_cough">Симптом: кашель</string>
     <string name="dry">Сухой</string>
     <string name="wet">Влажный</string>
+    <string name="Feb">Февраль 2022</string>
+    <string name="Monday">ПН</string>
+    <string name="Tuesday">ВТ</string>
+    <string name="Wednesday">СР</string>
+    <string name="Thursday">ЧТ</string>
+    <string name="Friday">ПТ</string>
+    <string name="Saturday">СБ</string>
+    <string name="Sunday">ВС</string>
+
 </resources>
