@@ -104,4 +104,16 @@
         <item name="android:text">@string/save</item>
         <item name="android:layout_marginEnd">30dp</item>
     </style>
+
+    // dict style
+
+    <style name="DropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/dark_pink</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="hintTextColor">@color/dark_birch</item>
+        <item name="drawableTintMode">@color/dark_pink</item>
+    </style>
 </resources>

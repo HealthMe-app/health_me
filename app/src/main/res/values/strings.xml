@@ -60,4 +60,15 @@
     <string name="title">Название</string>
     <string name="further">Далее</string>
     <string name="symptom">Симптом:</string>
+    <string name="dict_text">Здесь вы можете найти информацию о препарате по его названию или симптому</string>
+    <string name="search_hint">Введите название или симптом</string>
+    <string name="not_found">Ничего не найдено</string>
+    <string name="med_indication">Показания к применению</string>
+    <string name="med_contraindication">Противопоказания</string>
+    <string name="med_side_effects">Побочные действия</string>
+    <string name="med_dosage">Способы применения</string>
+    <string name="type">Тип записи</string>
+    <string name="address">Адрес</string>
+    <string name="update_appointment">Редактировать запись</string>
+    <string name="delete">Удалить</string>
 </resources>
