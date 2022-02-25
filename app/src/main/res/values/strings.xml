@@ -59,7 +59,5 @@
     <string name="add_new_symptom">Добавить новый симптом</string>
     <string name="title">Название</string>
     <string name="further">Далее</string>
-    <string name="symptom_cough">Симптом: кашель</string>
-    <string name="dry">Сухой</string>
-    <string name="wet">Влажный</string>
+    <string name="symptom">Симптом:</string>
 </resources>

@@ -12,10 +12,10 @@
         android:id="@+id/title"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_dark_pink_top_10"
+        android:background="@color/dark_pink"
         android:gravity="center"
         android:paddingVertical="20dp"
-        android:text="@string/symptom_cough"
+        android:text="@string/symptom"
         android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -42,8 +42,7 @@
                 android:id="@+id/btnTemperature"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@drawable/ic_symptom_temperature"
                 tools:ignore="ContentDescription" />
@@ -52,8 +51,7 @@
                 android:id="@+id/btnCough"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_cough_foreground"
                 tools:ignore="ContentDescription" />
@@ -62,8 +60,7 @@
                 android:id="@+id/btnRunnyNose"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_runny_nose_foreground"
                 tools:ignore="ContentDescription" />
@@ -72,8 +69,7 @@
                 android:id="@+id/btnToothache"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_toothache_foreground"
                 tools:ignore="ContentDescription" />
@@ -82,8 +78,7 @@
                 android:id="@+id/btnHeadache"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_headache_foreground"
                 tools:ignore="ContentDescription" />
@@ -100,8 +95,7 @@
                 android:id="@+id/btnOdor"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_odor_foreground"
                 tools:ignore="ContentDescription" />
@@ -110,8 +104,7 @@
                 android:id="@+id/btnStomachache"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_stomachache_foreground"
                 tools:ignore="ContentDescription" />
@@ -120,8 +113,7 @@
                 android:id="@+id/btnDiarrhea"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_diarrhea_foreground"
                 tools:ignore="ContentDescription" />
@@ -130,18 +122,16 @@
                 android:id="@+id/btnVomit"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_vomit_foreground"
                 tools:ignore="ContentDescription" />
 
             <ImageButton
                 android:id="@+id/btnPlus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_plus"
                 tools:ignore="ContentDescription" />
         </TableRow>
@@ -158,44 +148,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listOfSymptom" />
 
-    <RadioGroup
-        android:id="@+id/typesOfCough"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstLine" >
-
-        <RadioButton
-            android:id="@+id/rbtnDryCough"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/dark_pink"
-            android:text="@string/dry"
-            android:textSize="20sp"
-            android:textColor="@color/db_text"/>
-
-        <RadioButton
-            android:id="@+id/rbtnWetCough"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/dark_pink"
-            android:text="@string/wet"
-            android:textSize="20sp"
-            android:textColor="@color/db_text"/>
-    </RadioGroup>
-
-    <View
-        android:id="@+id/secondLine"
-        android:layout_width="300dp"
-        android:layout_height="0.5dp"
-        android:layout_marginTop="25dp"
-        android:background="@color/line"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typesOfCough" />
-
     <EditText
         android:id="@+id/trackerDateAndTime"
         style="@style/EdittextStyle"
@@ -204,7 +156,7 @@
         android:inputType="datetime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/secondLine"
+        app:layout_constraintTop_toBottomOf="@+id/firstLine"
         android:importantForAutofill="no" />
 
     <EditText

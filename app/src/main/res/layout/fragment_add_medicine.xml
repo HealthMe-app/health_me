@@ -11,7 +11,7 @@
         android:id="@+id/title"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_dark_pink_top_10"
+        android:background="@color/dark_pink"
         android:gravity="center"
         android:paddingVertical="20dp"
         android:text="@string/add_medicine"

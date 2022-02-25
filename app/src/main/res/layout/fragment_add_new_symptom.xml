@@ -12,7 +12,7 @@
         android:id="@+id/title"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_dark_pink_top_10"
+        android:background="@color/dark_pink"
         android:gravity="center"
         android:paddingVertical="20dp"
         android:text="@string/add_new_symptom"
@@ -43,8 +43,7 @@
                 android:id="@+id/btnLightning"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@drawable/ic_symptom_lightning"
                 tools:ignore="ContentDescription" />
@@ -53,8 +52,7 @@
                 android:id="@+id/btnFaint"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_faint_foreground"
                 tools:ignore="ContentDescription" />
@@ -63,8 +61,7 @@
                 android:id="@+id/btnSick"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_sick_foreground"
                 tools:ignore="ContentDescription" />
@@ -73,8 +70,7 @@
                 android:id="@+id/btnChickenpox"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_chickenpox_foreground"
                 tools:ignore="ContentDescription" />
@@ -83,8 +79,7 @@
                 android:id="@+id/btnStomachachePain"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginRight="4.8dp"
+                android:layout_marginHorizontal="4.8dp"
                 android:background="@drawable/ic_symptom_circle_birch"
                 android:src="@mipmap/ic_symptom_stomach_pain_foreground"
                 tools:ignore="ContentDescription" />
