@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_gray_20"
+    android:paddingBottom="20dp">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dark_pink_top_20"
+        android:gravity="center"
+        android:paddingVertical="20dp"
+        android:text="@string/avatar"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/arrowLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/btnCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@drawable/ic_arrow_gray" />
+
+    <ImageView
+        android:id="@+id/imageCircleForCatPink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancel"
+        app:layout_constraintStart_toEndOf="@+id/arrowLeft"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@drawable/ic_circle_pink" />
+
+    <ImageView
+        android:id="@+id/imageJessicaInProfileSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/ic_jessica_in_mask_description"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCircleForCatPink"
+        app:layout_constraintEnd_toEndOf="@+id/imageCircleForCatPink"
+        app:layout_constraintStart_toStartOf="@+id/imageCircleForCatPink"
+        app:layout_constraintTop_toTopOf="@+id/imageCircleForCatPink"
+        app:srcCompat="@drawable/ic_cat_jessica_avatar" />
+
+    <ImageView
+        android:id="@+id/imageSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_select"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCircleForCatPink"
+        app:layout_constraintEnd_toEndOf="@+id/imageCircleForCatPink" />
+
+    <ImageView
+        android:id="@+id/imageCircleForCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        app:layout_constraintEnd_toStartOf="@id/arrowRight"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@drawable/ic_circle_gray" />
+
+    <ImageView
+        android:id="@+id/imageBarsikProfileSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCircleForCat"
+        app:layout_constraintEnd_toEndOf="@+id/imageCircleForCat"
+        app:layout_constraintStart_toStartOf="@+id/imageCircleForCat"
+        app:layout_constraintTop_toTopOf="@+id/imageCircleForCat"
+        app:srcCompat="@drawable/ic_cat_barsik_avatar" />
+
+    <ImageView
+        android:id="@+id/arrowRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:minWidth="8dp"
+        android:minHeight="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@drawable/ic_arrow_pink" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCancel"
+        style="@style/CancelButtonStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageCircleForCat" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        style="@style/SaveButtonStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageCircleForCatPink" />
+</androidx.constraintlayout.widget.ConstraintLayout>

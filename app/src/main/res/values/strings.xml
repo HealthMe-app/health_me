@@ -70,5 +70,10 @@
     <string name="Friday">ПТ</string>
     <string name="Saturday">СБ</string>
     <string name="Sunday">ВС</string>
-
+    <string name="avatar">Иконка профиля</string>
+    <string name="offer_to_change_password">Желаете сменить пароль?</string>
+    <string name="change_password">Смена пароля</string>
+    <string name="current_password">Текущий пароль</string>
+    <string name="new_password">Новый пароль</string>
+    <string name="repeat_password">Повторите пароль</string>
 </resources>
