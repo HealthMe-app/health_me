@@ -25,8 +25,6 @@
 
     <EditText
         android:id="@+id/securityEmail"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
         style="@style/EdittextStyle"
         android:hint="@string/prompt_email"
         app:layout_constraintEnd_toEndOf="parent"

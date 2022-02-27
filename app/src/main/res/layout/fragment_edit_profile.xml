@@ -24,8 +24,6 @@
 
     <EditText
         android:id="@+id/profileSettingsName"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
         style="@style/EdittextStyle"
         android:hint="@string/name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,8 +34,6 @@
 
     <EditText
         android:id="@+id/profileSettingsGender"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
         style="@style/EdittextStyle"
         android:hint="@string/gender"
         app:layout_constraintEnd_toEndOf="parent"
