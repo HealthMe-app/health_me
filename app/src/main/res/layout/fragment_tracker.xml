@@ -203,9 +203,9 @@
         android:focusable="true"
         android:minWidth="48dp"
         android:minHeight="48dp"
-        android:src="@drawable/ic_cancel"
+        android:src="@drawable/ic_cross_white"
+        android:backgroundTint="@color/dark_birch"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@android:color/white" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
