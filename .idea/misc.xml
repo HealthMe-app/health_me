@@ -8,6 +8,7 @@
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_dark_pink_stroke_10.xml" value="0.2245" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_dark_pink_top_10.xml" value="0.2245" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_dark_pink_top_20.xml" value="0.2245" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_light_birch_280.xml" value="0.2325" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_light_pink_13.xml" value="0.2245" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_light_pink_20.xml" value="0.2245" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/bg_ulight_birch_13.xml" value="0.2245" />
@@ -21,9 +22,11 @@
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_arrow_left.xml" value="0.244" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_arrow_pink.xml" value="0.2245" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_arrow_right.xml" value="0.2245" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_cancel.xml" value="0.2245" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_cat_jessica.xml" value="0.2245" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_circle.xml" value="0.2245" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_cross.xml" value="0.2245" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_cross_white.xml" value="0.2245" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_plus.xml" value="0.2245" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/ic_to_calendar_btn.xml" value="0.2245" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/drawable/row_appointment.xml" value="0.2245" />
@@ -38,6 +41,7 @@
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_edit_avatar.xml" value="0.264" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_edit_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_home.xml" value="0.16621376811594202" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_login.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_profile_settings.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_registration.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_settings_security.xml" value="0.25416666666666665" />
@@ -49,6 +53,7 @@
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/row_closet_appointment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/row_medicine.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/row_symptom.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/row_timeline.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/healthme/app/src/main/res/drawable/ic_add.xml" value="0.2595" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/healthme/app/src/main/res/drawable/ic_add1.xml" value="0.2595" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/healthme/app/src/main/res/layout/fragment_calendar.xml" value="0.20108695652173914" />
