@@ -141,6 +141,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSave"
         style="@style/SaveButtonStyle"
+        android:text="@string/apply_all"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameVaccination" />
 

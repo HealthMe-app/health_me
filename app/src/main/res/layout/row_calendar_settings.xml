@@ -16,21 +16,38 @@
         android:maxLines="1"
         android:textColor="@color/dark_birch"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/firstDoctorInterval"
+        app:layout_constraintBottom_toBottomOf="@+id/firstDoctorSizeInterval"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-<!--    fix for dropdownmenu-->
+
+    <EditText
+        android:id="@+id/firstDoctorSizeInterval"
+        android:background="@drawable/bg_white_10"
+        android:elevation="1dp"
+        android:padding="5dp"
+        android:textColor="@color/dark_birch"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_height="40dp"
+        android:layout_width="37dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/firstDoctorInterval"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--    fix for dropdownmenu-->
     <EditText
         android:id="@+id/firstDoctorInterval"
         style="@style/EdittextCalendarStyle"
-        android:layout_width="80dp"
+        android:layout_width="64dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toStartOf="@+id/firstDoctorDate"
         app:layout_constraintTop_toTopOf="parent" />
     <!--    fix for dropdownmenu-->
     <EditText
         android:id="@+id/firstDoctorDate"
         style="@style/EdittextCalendarStyle"
-        android:layout_width="105dp"
+        android:layout_width="98dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toStartOf="@+id/firstDoctorCross"
         app:layout_constraintTop_toTopOf="parent" />
 
