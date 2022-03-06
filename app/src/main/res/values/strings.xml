@@ -76,4 +76,9 @@
     <string name="current_password">Текущий пароль</string>
     <string name="new_password">Новый пароль</string>
     <string name="repeat_password">Повторите пароль</string>
+    <string name="fr_notifications_settings_explanation">Укажите, насколько заранее и как часто вы хотели бы получать уведомления</string>
+    <string name="medical_procedures">Записи на медпроцедуры</string>
+    <string name="recommendations">Рекомендации</string>
+    <string name="in">за</string>
+    <string name="apply_all">Применить все</string>
 </resources>
