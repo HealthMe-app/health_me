@@ -81,7 +81,7 @@
         <TextView
             android:id="@+id/textSurvey"
             style="@style/textCalendarSettingsStyle"
-            android:text="@string/survey" />
+            android:text="@string/surveys" />
 
         <ImageView
             android:id="@+id/imageView9"

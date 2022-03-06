@@ -42,7 +42,8 @@
     <string name="save">Сохранить</string>
     <string name="cancel">Отмена</string>
     <string name="doctors">Врачи</string>
-    <string name="survey">Обследования</string>
+    <string name="surveys">Обследования</string>
+    <string name="survey">Обследование</string>
     <string name="vaccination">Прививки</string>
     <string name="ic_doctors_description">The picture shows a doctor.</string>
     <string name="ic_arrow_description">The picture shows a closed arrow.</string>
@@ -81,4 +82,7 @@
     <string name="recommendations">Рекомендации</string>
     <string name="in">за</string>
     <string name="apply_all">Применить все</string>
+    <string name="add_procedure">Добавить медпроцедуру</string>
+    <string name="date_of_reference">Дата отсчёта</string>
+    <string name="frequency">Проводится раз в</string>
 </resources>
