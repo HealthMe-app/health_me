@@ -15,7 +15,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.json.JSONObject
 import java.security.AccessController.getContext
 
-
 class MainActivity : AppCompatActivity() {
 
     private var _binding: ActivityMainBinding? = null
@@ -25,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
+        this.supportActionBar!!.show()
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -34,15 +34,12 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         NavigationUI.setupWithNavController(bottomNav, navHostFragment.navController)
 
-        val repository = Repository()
-        val viewModelFactory = MainViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
-
-
-        // registration is working completely fine
-
+//        val repository = Repository()
+//        val viewModelFactory = MainViewModelFactory(repository)
+//        viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
+//
 //        viewModel.register(
-//            "lol1@email.ru",
+//            "lol2@email.ru",
 //            "Danil",
 //            false,
 //            "2005-01-15",
@@ -58,9 +55,7 @@ class MainActivity : AppCompatActivity() {
 //                Log.e("Error Response", errorText.toString())
 //            }
 //        })
-
-        // authorization is working completely fine
-
+//
 //        viewModel.login(
 //            "lol1@email.ru",
 //            "1111"
@@ -75,8 +70,7 @@ class MainActivity : AppCompatActivity() {
 //                Log.e("Error Response", errorText.toString())
 //            }
 //        })
-
-
+//
 //        viewModel.getUser("Token 213f93e3463d8394ad16f2cea4ded481b3f44059a65a9ae3530539ca344539d4")
 //        viewModel.myResponse.observe(this, Observer { response ->
 //            if (response.isSuccessful)
@@ -86,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 //                Log.e("Error Response", errorText.toString())
 //            }
 //        })
-
+//
 //        viewModel.logout("Token 213f93e3463d8394ad16f2cea4ded481b3f44059a65a9ae3530539ca344539d4")
 //        viewModel.myResponseString.observe(this, Observer { response ->
 //            if (response.isSuccessful)

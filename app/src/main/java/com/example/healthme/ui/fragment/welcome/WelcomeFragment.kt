@@ -1,7 +1,10 @@
 package com.example.healthme.ui.fragment.welcome
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.healthme.R
@@ -17,6 +20,7 @@ class WelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentWelcomeBinding.inflate(inflater, container, false)
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
         binding.toRegistrationBtn.setOnClickListener {
             findNavController().navigate(R.id.to_registrationFragment)

@@ -17,6 +17,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
         (activity as AppCompatActivity).supportActionBar?.title = resources.getString(R.string.home)
         setHasOptionsMenu(true)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)

@@ -1,5 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     // application theme
+
     <style name="Theme.Healthme" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/dark_birch</item>
@@ -7,13 +8,19 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="actionBarTheme">@style/AppTheme.AppBarOverlay</item>
     </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:textColorPrimary">@color/dark_birch</item>
     </style>
+
     <style name="Theme.Launcher" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
         <item name="postSplashScreenTheme">@style/Theme.Healthme</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="colorAccent">@color/birch</item>
     </style>
 
     // common style
@@ -29,6 +36,16 @@
         <item name="android:textColor">@color/dark_birch</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textCursorDrawable">@drawable/ic_cursor</item>
+    </style>
+
+    <style name="DropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/dark_pink</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="hintTextColor">@color/dark_birch</item>
+        <item name="drawableTintMode">@color/dark_pink</item>
     </style>
 
     // calendar style
@@ -103,5 +120,17 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:text">@string/save</item>
         <item name="android:layout_marginEnd">30dp</item>
+    </style>
+
+    // dict style
+
+    <style name="DropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/dark_pink</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="hintTextColor">@color/dark_birch</item>
+        <item name="drawableTintMode">@color/dark_pink</item>
     </style>
 </resources>

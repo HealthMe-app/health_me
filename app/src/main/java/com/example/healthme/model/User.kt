@@ -1,8 +1,5 @@
 package com.example.healthme.model
 
-import java.time.LocalDate
-import java.util.*
-
 data class User(
     val id: Int,
     val email: String,
