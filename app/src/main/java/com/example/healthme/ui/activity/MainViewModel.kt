@@ -5,11 +5,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.healthme.model.User
 import com.example.healthme.model.UserInfo
-import com.example.healthme.repository.Repository
+import com.example.healthme.repository.ApiRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
-class MainViewModel(private val repository: Repository) : ViewModel() {
+class MainViewModel(private val apiRepository: ApiRepository) : ViewModel() {
 
     val myResponse: MutableLiveData<Response<User>> = MutableLiveData()
     val myResponseUserInfo: MutableLiveData<Response<UserInfo>> = MutableLiveData()
@@ -17,7 +17,7 @@ class MainViewModel(private val repository: Repository) : ViewModel() {
 
     fun getUser(token: String) {
         viewModelScope.launch {
-            val response = repository.getUser(token)
+            val response = apiRepository.getUser(token)
             myResponse.value = response
         }
     }
@@ -27,21 +27,21 @@ class MainViewModel(private val repository: Repository) : ViewModel() {
         password: String
     ) {
         viewModelScope.launch {
-            val response = repository.register(email, first_name, sex, date_of_birth, password)
+            val response = apiRepository.register(email, first_name, sex, date_of_birth, password)
             myResponseUserInfo.value = response
         }
     }
 
     fun login(email: String, password: String) {
         viewModelScope.launch {
-            val response = repository.login(email, password)
+            val response = apiRepository.login(email, password)
             myResponseUserInfo.value = response
         }
     }
 
     fun logout(token: String) {
         viewModelScope.launch {
-            val response = repository.logout(token)
+            val response = apiRepository.logout(token)
             myResponseString.value = response
         }
     }

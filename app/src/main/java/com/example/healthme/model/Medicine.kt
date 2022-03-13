@@ -1,4 +1,4 @@
-package com.example.healthme.ui.model
+package com.example.healthme.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

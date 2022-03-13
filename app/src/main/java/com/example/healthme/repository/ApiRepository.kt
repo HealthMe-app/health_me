@@ -5,7 +5,7 @@ import com.example.healthme.model.User
 import com.example.healthme.model.UserInfo
 import retrofit2.Response
 
-class Repository {
+class ApiRepository {
 
     suspend fun getUser(token: String): Response<User> {
         return RetrofitInstance.api.getUser(token)

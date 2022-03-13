@@ -7,11 +7,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.healthme.R
-import com.example.healthme.ui.viewmodel.MedicineViewModel
+import com.example.healthme.viewmodel.MedicineViewModel
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import com.example.healthme.ui.util.Util.hideContent
-import com.example.healthme.ui.util.Util.showContent
+import com.example.healthme.util.Util.hideContent
+import com.example.healthme.util.Util.showContent
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.core.widget.addTextChangedListener
 import com.example.healthme.databinding.FragmentDictBinding

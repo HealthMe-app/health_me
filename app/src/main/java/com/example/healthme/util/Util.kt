@@ -1,4 +1,4 @@
-package com.example.healthme.ui.util
+package com.example.healthme.util
 
 import android.view.View
 import com.example.healthme.R

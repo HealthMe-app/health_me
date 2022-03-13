@@ -1,10 +1,10 @@
-package com.example.healthme.ui.data.medicine
+package com.example.healthme.data.medicine
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.healthme.ui.model.Medicine
+import com.example.healthme.model.Medicine
 
 @Database(entities = [Medicine::class], version = 1, exportSchema = true)
 abstract class MedicineDatabase : RoomDatabase() {

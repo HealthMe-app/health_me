@@ -1,11 +1,11 @@
-package com.example.healthme.ui.viewmodel
+package com.example.healthme.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.example.healthme.ui.data.medicine.MedicineDatabase
-import com.example.healthme.ui.model.Medicine
-import com.example.healthme.ui.repository.MedicineRepository
+import com.example.healthme.data.medicine.MedicineDatabase
+import com.example.healthme.model.Medicine
+import com.example.healthme.repository.MedicineRepository
 
 class MedicineViewModel(application: Application): AndroidViewModel(application) {
 

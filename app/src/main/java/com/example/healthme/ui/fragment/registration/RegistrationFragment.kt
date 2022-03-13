@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.healthme.R
 import com.example.healthme.databinding.FragmentRegistrationBinding
-import com.example.healthme.repository.Repository
+import com.example.healthme.repository.ApiRepository
 import com.example.healthme.ui.activity.MainViewModel
 import com.example.healthme.ui.activity.MainViewModelFactory
 import java.time.LocalDate
@@ -33,7 +33,7 @@ class RegistrationFragment : Fragment() {
         _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
-        val repository = Repository()
+        val repository = ApiRepository()
         val viewModelFactory = MainViewModelFactory(repository)
         viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
 

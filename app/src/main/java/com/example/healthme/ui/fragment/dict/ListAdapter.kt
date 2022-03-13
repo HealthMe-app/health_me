@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.recyclerview.widget.RecyclerView
 import com.example.healthme.R
-import com.example.healthme.ui.model.Medicine
+import com.example.healthme.model.Medicine
 import kotlinx.android.synthetic.main.medicine_recycler_row.view.*
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {

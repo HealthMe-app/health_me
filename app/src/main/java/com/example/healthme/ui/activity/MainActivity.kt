@@ -1,19 +1,13 @@
 package com.example.healthme.ui.activity
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.healthme.R
 import com.example.healthme.databinding.ActivityMainBinding
-import com.example.healthme.repository.Repository
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import org.json.JSONObject
-import java.security.AccessController.getContext
 
 class MainActivity : AppCompatActivity() {
 

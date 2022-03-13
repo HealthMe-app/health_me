@@ -1,8 +1,8 @@
-package com.example.healthme.ui.data.medicine
+package com.example.healthme.data.medicine
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.healthme.ui.model.Medicine
+import com.example.healthme.model.Medicine
 
 @Dao
 interface MedicineDao {
