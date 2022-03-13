@@ -42,7 +42,8 @@
     <string name="save">Сохранить</string>
     <string name="cancel">Отмена</string>
     <string name="doctors">Врачи</string>
-    <string name="survey">Обследования</string>
+    <string name="surveys">Обследования</string>
+    <string name="survey">Обследование</string>
     <string name="vaccination">Прививки</string>
     <string name="ic_doctors_description">The picture shows a doctor.</string>
     <string name="ic_arrow_description">The picture shows a closed arrow.</string>
@@ -82,4 +83,29 @@
         <item>Процедура</item>
         <item>Обследование</item>
     </string-array>
+    <string name="symptom_cough">Симптом: кашель</string>
+    <string name="dry">Сухой</string>
+    <string name="wet">Влажный</string>
+    <string name="Feb">Февраль 2022</string>
+    <string name="Monday">ПН</string>
+    <string name="Tuesday">ВТ</string>
+    <string name="Wednesday">СР</string>
+    <string name="Thursday">ЧТ</string>
+    <string name="Friday">ПТ</string>
+    <string name="Saturday">СБ</string>
+    <string name="Sunday">ВС</string>
+    <string name="avatar">Иконка профиля</string>
+    <string name="offer_to_change_password">Желаете сменить пароль?</string>
+    <string name="change_password">Смена пароля</string>
+    <string name="current_password">Текущий пароль</string>
+    <string name="new_password">Новый пароль</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="fr_notifications_settings_explanation">Укажите, насколько заранее и как часто вы хотели бы получать уведомления</string>
+    <string name="medical_procedures">Записи на медпроцедуры</string>
+    <string name="recommendations">Рекомендации</string>
+    <string name="in">за</string>
+    <string name="apply_all">Применить все</string>
+    <string name="add_procedure">Добавить медпроцедуру</string>
+    <string name="date_of_reference">Дата отсчёта</string>
+    <string name="frequency">Проводится раз в</string>
 </resources>

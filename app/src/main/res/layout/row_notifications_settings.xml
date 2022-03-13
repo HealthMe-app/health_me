@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="30dp"
+    android:layout_marginStart="40dp"
+    android:layout_marginEnd="144dp"
     android:layout_marginVertical="5dp"
     android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageDotProcedure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dot"
+        app:layout_constraintBottom_toBottomOf="@+id/firstDoctorInterval"
+        app:layout_constraintEnd_toStartOf="@+id/procedureName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/procedureName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
         android:ellipsize="end"
         android:maxLines="1"
+        android:text="@string/in"
         android:textColor="@color/dark_birch"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/firstDoctorSizeInterval"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/firstDoctorInterval"
+        app:layout_constraintEnd_toStartOf="@+id/firstDoctorInterval"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/firstDoctorSizeInterval"
+        android:id="@+id/firstDoctorInterval"
         android:background="@drawable/bg_white_10"
         android:elevation="1dp"
         android:padding="5dp"
@@ -30,26 +44,18 @@
         android:gravity="center"
         android:layout_height="40dp"
         android:layout_width="37dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/firstDoctorInterval"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/firstDoctorDate"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!--    fix for dropdownmenu-->
-    <EditText
-        android:id="@+id/firstDoctorInterval"
-        style="@style/EdittextCalendarStyle"
-        android:layout_width="64dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/firstDoctorDate"
-        app:layout_constraintTop_toTopOf="parent" />
-    <!--    fix for dropdownmenu-->
     <EditText
         android:id="@+id/firstDoctorDate"
         style="@style/EdittextCalendarStyle"
-        android:layout_width="98dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="64dp"
+        android:layout_marginEnd="14dp"
         app:layout_constraintEnd_toStartOf="@+id/firstDoctorCross"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:drawableEnd="@drawable/ic_arrow_birch"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/firstDoctorCross"
@@ -59,6 +65,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/firstDoctorDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_cross" />
-
+        app:srcCompat="@drawable/ic_cross_birch" />
 </androidx.constraintlayout.widget.ConstraintLayout>

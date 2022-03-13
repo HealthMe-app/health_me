@@ -81,7 +81,7 @@
         <TextView
             android:id="@+id/textSurvey"
             style="@style/textCalendarSettingsStyle"
-            android:text="@string/survey" />
+            android:text="@string/surveys" />
 
         <ImageView
             android:id="@+id/imageView9"
@@ -141,6 +141,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSave"
         style="@style/SaveButtonStyle"
+        android:text="@string/apply_all"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameVaccination" />
 

@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_add_procedure.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_calendar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_calendar_settings.xml" value="0.1897644927536232" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_edit_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_profile_settings.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_recommended_settings.xml" value="0.1897644927536232" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/fragment_tracker.xml" value="0.10625" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health/app/src/main/res/layout/row_calendar_settings.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/healthme/app/src/main/res/drawable/ic_add.xml" value="0.2595" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/healthme/app/src/main/res/drawable/ic_add1.xml" value="0.2595" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/healthme/app/src/main/res/layout/fragment_calendar.xml" value="0.20108695652173914" />
