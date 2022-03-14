@@ -21,9 +21,13 @@ class CalendarFragment : Fragment() {
         setHasOptionsMenu(true)
         _binding = FragmentCalendarBinding.inflate(inflater, container, false)
 
-//        binding.toCalendarBtn.setOnClickListener {
-//            findNavController().navigate(R.id.to_addAppointment)
-//        }
+        binding.btnTimeline.setOnClickListener {
+            findNavController().navigate(R.id.to_timelineFragment)
+        }
+
+        binding.btnAddAppointment.setOnClickListener {
+            findNavController().navigate(R.id.to_addAppointmentFragment)
+        }
 
         return binding.root
     }

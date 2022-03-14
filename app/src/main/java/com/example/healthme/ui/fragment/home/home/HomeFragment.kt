@@ -22,9 +22,13 @@ class HomeFragment : Fragment() {
         setHasOptionsMenu(true)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-//        binding.toCalendarBtn.setOnClickListener {
-//            findNavController().navigate(R.id.to_addAppointment)
-//        }
+        binding.btnAddAppointment.setOnClickListener {
+            findNavController().navigate(R.id.to_addAppointmentFragment)
+        }
+
+        binding.btnAddSymptom.setOnClickListener {
+            findNavController().navigate(R.id.to_addSymptomFragment)
+        }
 
         return binding.root
     }

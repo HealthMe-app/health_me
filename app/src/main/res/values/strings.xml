@@ -108,4 +108,10 @@
     <string name="add_procedure">Добавить медпроцедуру</string>
     <string name="date_of_reference">Дата отсчёта</string>
     <string name="frequency">Проводится раз в</string>
+    <string name="add_notification">Добавить уведомление</string>
+    <string name="notification_type">Тип уведомления</string>
+    <string name="logout">Выход</string>
+    <string name="logout_text">Вы действительно хотите выйти из аккаунта?</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
 </resources>

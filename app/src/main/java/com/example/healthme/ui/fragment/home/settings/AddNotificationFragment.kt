@@ -1,30 +1,26 @@
-package com.example.healthme.ui.fragment.calendar.rec_settings
+package com.example.healthme.ui.fragment.home.settings
 
 import android.os.Bundle
 import android.view.*
-import android.widget.ArrayAdapter
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.healthme.R
-import com.example.healthme.databinding.FragmentRecommendedSettingsBinding
+import com.example.healthme.databinding.FragmentAddNotificationBinding
 
-class CalendarRecommendedSettingsFragment : DialogFragment() {
+class AddNotificationFragment : DialogFragment() {
 
-    private var _binding: FragmentRecommendedSettingsBinding? = null
-    private val binding: FragmentRecommendedSettingsBinding get() = _binding!!
+    private var _binding: FragmentAddNotificationBinding? = null
+    private val binding: FragmentAddNotificationBinding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        (activity as AppCompatActivity).supportActionBar?.title = resources.getString(R.string.calendar_settings)
-        _binding = FragmentRecommendedSettingsBinding.inflate(inflater, container, false)
+        _binding = FragmentAddNotificationBinding.inflate(inflater, container, false)
 
         binding.btnSave.setOnClickListener {
-
+            Toast.makeText(requireContext(), "Уведомление добавлено успешно", Toast.LENGTH_LONG).show()
         }
 
         binding.btnCancel.setOnClickListener {

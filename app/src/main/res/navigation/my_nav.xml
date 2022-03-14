@@ -49,6 +49,15 @@
         <action
             android:id="@+id/to_profileSettingsFragment"
             app:destination="@id/profileSettingsFragment" />
+        <action
+            android:id="@+id/to_addAppointmentFragment"
+            app:destination="@id/addAppointmentFragment" />
+        <action
+            android:id="@+id/to_updateAppointmentFragment"
+            app:destination="@id/updateAppointmentFragment" />
+        <action
+            android:id="@+id/to_addSymptomFragment"
+            app:destination="@id/addSymptomFragment" />
     </fragment>
     <fragment
         android:id="@+id/calendarFragment"
@@ -58,6 +67,15 @@
         <action
             android:id="@+id/to_calendarSettingsFragment"
             app:destination="@id/calendarSettingsFragment" />
+        <action
+            android:id="@+id/to_addAppointmentFragment"
+            app:destination="@id/addAppointmentFragment" />
+        <action
+            android:id="@+id/to_updateAppointmentFragment"
+            app:destination="@id/updateAppointmentFragment" />
+        <action
+            android:id="@+id/to_timelineFragment"
+            app:destination="@id/timelineFragment" />
     </fragment>
     <fragment
         android:id="@+id/dictFragment"
@@ -68,21 +86,126 @@
         android:id="@+id/trackerFragment"
         android:name="com.example.healthme.ui.fragment.tracker.TrackerFragment"
         android:label="fragment_tracker"
-        tools:layout="@layout/fragment_tracker" />
+        tools:layout="@layout/fragment_tracker" >
+        <action
+            android:id="@+id/to_addMedicineFragment"
+            app:destination="@id/addMedicineFragment" />
+        <action
+            android:id="@+id/to_addSymptomFragment"
+            app:destination="@id/addSymptomFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileSettingsFragment"
         android:name="com.example.healthme.ui.fragment.home.settings.ProfileSettingsFragment"
-        android:label="ProfileSettingsFragment" />
+        android:label="ProfileSettingsFragment" >
+        <action
+            android:id="@+id/to_changeAvatarFragment"
+            app:destination="@id/changeAvatarFragment" />
+        <action
+            android:id="@+id/to_changeProfileFragment"
+            app:destination="@id/changeProfileFragment" />
+        <action
+            android:id="@+id/to_securitySettingsFragment"
+            app:destination="@id/securitySettingsFragment" />
+        <action
+            android:id="@+id/to_notificationSettingsFragment"
+            app:destination="@id/notificationSettingsFragment" />
+        <action
+            android:id="@+id/to_logoutFragment"
+            app:destination="@id/logoutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/calendarSettingsFragment"
-        android:name="com.example.healthme.ui.fragment.calendar.settings.CalendarSettingsFragment"
+        android:name="com.example.healthme.ui.fragment.calendar.settings.settings.CalendarSettingsFragment"
         android:label="CalendarSettingsFragment" >
         <action
             android:id="@+id/to_calendarRecommendedSettingsFragment"
             app:destination="@id/calendarRecommendedSettingsFragment" />
+        <action
+            android:id="@+id/to_addProcedureFragment"
+            app:destination="@id/addProcedureFragment" />
     </fragment>
     <dialog
         android:id="@+id/calendarRecommendedSettingsFragment"
-        android:name="com.example.healthme.ui.fragment.calendar.rec_settings.CalendarRecommendedSettingsFragment"
+        android:name="com.example.healthme.ui.fragment.calendar.settings.rec_settings.CalendarRecommendedSettingsFragment"
         android:label="CalendarRecommendedSettingsFragment" />
+    <dialog
+        android:id="@+id/addAppointmentFragment"
+        android:name="com.example.healthme.ui.fragment.calendar.appointment.add.AddAppointmentFragment"
+        android:label="AddAppointmentFragment" />
+    <dialog
+        android:id="@+id/updateAppointmentFragment"
+        android:name="com.example.healthme.ui.fragment.calendar.appointment.update.UpdateAppointmentFragment"
+        android:label="UpdateAppointmentFragment" />
+    <dialog
+        android:id="@+id/addProcedureFragment"
+        android:name="com.example.healthme.ui.fragment.calendar.settings.add.AddProcedureFragment"
+        android:label="AddProcedureFragment" />
+    <dialog
+        android:id="@+id/addMedicineFragment"
+        android:name="com.example.healthme.ui.fragment.tracker.AddMedicineFragment"
+        android:label="AddMedicineFragment" />
+    <dialog
+        android:id="@+id/addNewSymptomFragment"
+        android:name="com.example.healthme.ui.fragment.tracker.AddNewSymptomFragment"
+        android:label="AddNewSymptomFragment" />
+    <dialog
+        android:id="@+id/addSymptomDetailsFragment"
+        android:name="com.example.healthme.ui.fragment.tracker.AddSymptomDetailsFragment"
+        android:label="AddSymptomDetailsFragment" >
+        <action
+            android:id="@+id/action_addSymptomDetailsFragment_to_addNewSymptomFragment"
+            app:destination="@id/addNewSymptomFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/addSymptomFragment"
+        android:name="com.example.healthme.ui.fragment.tracker.AddSymptomFragment"
+        android:label="AddSymptomFragment" >
+        <action
+            android:id="@+id/to_addSymptomDetailsFragment"
+            app:destination="@id/addSymptomDetailsFragment" />
+        <action
+            android:id="@+id/to_addNewSymptomFragment"
+            app:destination="@id/addNewSymptomFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/changeAvatarFragment"
+        android:name="com.example.healthme.ui.fragment.home.settings.ChangeAvatarFragment"
+        android:label="ChangeAvatarFragment" />
+    <dialog
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.healthme.ui.fragment.home.settings.ChangePasswordFragment"
+        android:label="ChangePasswordFragment" />
+    <dialog
+        android:id="@+id/changeProfileFragment"
+        android:name="com.example.healthme.ui.fragment.home.settings.ChangeProfileFragment"
+        android:label="ChangeProfileFragment" />
+    <fragment
+        android:id="@+id/notificationSettingsFragment"
+        android:name="com.example.healthme.ui.fragment.home.settings.NotificationSettingsFragment"
+        android:label="NotificationSettingsFragment" >
+        <action
+            android:id="@+id/to_addNotificationFragment"
+            app:destination="@id/addNotificationFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/securitySettingsFragment"
+        android:name="com.example.healthme.ui.fragment.home.settings.SecuritySettingsFragment"
+        android:label="SecuritySettingsFragment" >
+        <action
+            android:id="@+id/to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/timelineFragment"
+        android:name="com.example.healthme.ui.fragment.calendar.calendar.TimelineFragment"
+        android:label="TimelineFragment" />
+    <dialog
+        android:id="@+id/addNotificationFragment"
+        android:name="com.example.healthme.ui.fragment.home.settings.AddNotificationFragment"
+        android:label="AddNotificationFragment" />
+    <dialog
+        android:id="@+id/logoutFragment"
+        android:name="com.example.healthme.ui.fragment.home.settings.LogoutFragment"
+        android:label="LogoutFragment" />
 </navigation>

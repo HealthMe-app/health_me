@@ -7,7 +7,7 @@ import androidx.core.view.isGone
 import androidx.recyclerview.widget.RecyclerView
 import com.example.healthme.R
 import com.example.healthme.model.Medicine
-import kotlinx.android.synthetic.main.medicine_recycler_row.view.*
+import kotlinx.android.synthetic.main.row_medicine.view.*
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
@@ -18,7 +18,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.medicine_recycler_row, parent, false)
+                .inflate(R.layout.row_medicine, parent, false)
         )
     }
 
@@ -36,17 +36,17 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             visible = if (holder.itemView.medDosage_frame.isGone) View.VISIBLE else View.GONE
             holder.itemView.medDosage_frame.visibility = visible
             if (visible == View.VISIBLE) holder.itemView.mainArrow.setImageResource(R.drawable.ic_arrow_up)
-            else holder.itemView.mainArrow.setImageResource(R.drawable.ic_arrow)
+            else holder.itemView.mainArrow.setImageResource(R.drawable.ic_arrow_dict)
 
             holder.itemView.medIndication_txt_frame.visibility = View.GONE
             holder.itemView.medContraindication_txt_frame.visibility = View.GONE
             holder.itemView.medSideEffects_txt_frame.visibility = View.GONE
             holder.itemView.medDosage_txt_frame.visibility = View.GONE
 
-            holder.itemView.indArrow.setImageResource(R.drawable.ic_arrow)
-            holder.itemView.contrArrow.setImageResource(R.drawable.ic_arrow)
-            holder.itemView.seArrow.setImageResource(R.drawable.ic_arrow)
-            holder.itemView.dosArrow.setImageResource(R.drawable.ic_arrow)
+            holder.itemView.indArrow.setImageResource(R.drawable.ic_arrow_dict)
+            holder.itemView.contrArrow.setImageResource(R.drawable.ic_arrow_dict)
+            holder.itemView.seArrow.setImageResource(R.drawable.ic_arrow_dict)
+            holder.itemView.dosArrow.setImageResource(R.drawable.ic_arrow_dict)
 
             visible = if (holder.itemView.footer.isGone) View.VISIBLE else View.GONE
             holder.itemView.footer.visibility = visible
@@ -58,7 +58,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             holder.itemView.medIndication_txt.text = currentItem.indication
 
             if (visible == View.VISIBLE) holder.itemView.indArrow.setImageResource(R.drawable.ic_arrow_up)
-            else holder.itemView.indArrow.setImageResource(R.drawable.ic_arrow)
+            else holder.itemView.indArrow.setImageResource(R.drawable.ic_arrow_dict)
         }
 
         holder.itemView.medContraindication_frame.setOnClickListener {
@@ -67,7 +67,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             holder.itemView.medContraindication_txt.text = currentItem.contraIndication
 
             if (visible == View.VISIBLE) holder.itemView.contrArrow.setImageResource(R.drawable.ic_arrow_up)
-            else holder.itemView.contrArrow.setImageResource(R.drawable.ic_arrow)
+            else holder.itemView.contrArrow.setImageResource(R.drawable.ic_arrow_dict)
         }
 
         holder.itemView.medSideEffects_frame.setOnClickListener {
@@ -76,7 +76,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             holder.itemView.medSideEffects_txt.text = currentItem.sideEffects
 
             if (visible == View.VISIBLE) holder.itemView.seArrow.setImageResource(R.drawable.ic_arrow_up)
-            else holder.itemView.seArrow.setImageResource(R.drawable.ic_arrow)
+            else holder.itemView.seArrow.setImageResource(R.drawable.ic_arrow_dict)
         }
 
         holder.itemView.medDosage_frame.setOnClickListener {
@@ -85,7 +85,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             holder.itemView.medDosage_txt.text = currentItem.dosage
 
             if (visible == View.VISIBLE) holder.itemView.dosArrow.setImageResource(R.drawable.ic_arrow_up)
-            else holder.itemView.dosArrow.setImageResource(R.drawable.ic_arrow)
+            else holder.itemView.dosArrow.setImageResource(R.drawable.ic_arrow_dict)
         }
     }
 

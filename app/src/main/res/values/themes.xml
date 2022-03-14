@@ -130,6 +130,6 @@
         <!-- активное состояние -->
         <item name="colorControlActivated">@color/dark_birch</item>
         <!-- неактивное состояние -->
-        <item name="colorSwitchThumbNormal">@color/dark_grey</item>
+        <item name="colorSwitchThumbNormal">@color/dark_gray</item>
     </style>
 </resources>

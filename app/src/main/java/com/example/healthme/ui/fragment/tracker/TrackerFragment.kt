@@ -3,6 +3,7 @@ package com.example.healthme.ui.fragment.tracker
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.healthme.R
@@ -21,11 +22,37 @@ class TrackerFragment : Fragment() {
         setHasOptionsMenu(true)
         _binding = FragmentTrackerBinding.inflate(inflater, container, false)
 
-//        binding.toCalendarBtn.setOnClickListener {
-//            findNavController().navigate(R.id.to_addAppointment)
-//        }
+        binding.btnAdd.setOnClickListener {
+            binding.btnAdd.hide()
+            binding.btnCancel.show()
+            binding.btnSymptom.show()
+            binding.btnMedicine.show()
+            binding.blackoutLayout.visibility = View.VISIBLE
+        }
+
+        binding.btnCancel.setOnClickListener {
+            hideDialogFAB()
+        }
+
+        binding.btnMedicine.setOnClickListener {
+            hideDialogFAB()
+            findNavController().navigate(R.id.to_addMedicineFragment)
+        }
+
+        binding.btnSymptom.setOnClickListener {
+            hideDialogFAB()
+            findNavController().navigate(R.id.to_addSymptomFragment)
+        }
 
         return binding.root
+    }
+
+    private fun hideDialogFAB() {
+        binding.btnAdd.show()
+        binding.btnCancel.hide()
+        binding.btnSymptom.hide()
+        binding.btnMedicine.hide()
+        binding.blackoutLayout.visibility = View.GONE
     }
 
     override fun onDestroyView() {

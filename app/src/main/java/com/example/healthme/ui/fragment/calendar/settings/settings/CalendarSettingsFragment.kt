@@ -1,4 +1,4 @@
-package com.example.healthme.ui.fragment.calendar.settings
+package com.example.healthme.ui.fragment.calendar.settings.settings
 
 import android.os.Bundle
 import android.view.*
@@ -22,6 +22,10 @@ class CalendarSettingsFragment : Fragment() {
 
         binding.toRecommendationBtn.setOnClickListener {
             findNavController().navigate(R.id.to_calendarRecommendedSettingsFragment)
+        }
+
+        binding.btnAddProcedure.setOnClickListener {
+            findNavController().navigate(R.id.to_addProcedureFragment)
         }
 
         return binding.root

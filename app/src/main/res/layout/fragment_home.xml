@@ -23,42 +23,44 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="20dp"
             android:src="@drawable/ic_cat_jessica" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="20dp"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Екатерина"
                 android:textColor="@color/db_text"
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/tvGender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Пол: женский"
                 android:textColor="@color/birch"
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/tvAge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Возраст: 20 лет"
                 android:textColor="@color/birch"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tvWhatDo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -68,18 +70,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
 
-
     <FrameLayout
-        android:id="@+id/to_calendar_btn"
+        android:id="@+id/btnAddAppointment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_gray_20"
+        android:background="@drawable/bg_white_10"
         android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1">
+        app:layout_constraintTop_toBottomOf="@+id/tvWhatDo">
 
         <TextView
             android:layout_width="wrap_content"
@@ -101,18 +102,17 @@
 
     </FrameLayout>
 
-
     <FrameLayout
-        android:id="@+id/to_tracker_btn"
+        android:id="@+id/btnAddSymptom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_gray_20"
+        android:background="@drawable/bg_white_10"
         android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/to_calendar_btn">
+        app:layout_constraintTop_toBottomOf="@+id/btnAddAppointment">
 
         <TextView
             android:layout_width="wrap_content"
@@ -134,7 +134,6 @@
 
     </FrameLayout>
 
-
     <FrameLayout
         android:id="@+id/reminder"
         android:layout_width="match_parent"
@@ -145,7 +144,7 @@
         android:paddingVertical="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/to_tracker_btn">
+        app:layout_constraintTop_toBottomOf="@+id/btnAddSymptom">
 
         <ImageView
             android:layout_width="wrap_content"

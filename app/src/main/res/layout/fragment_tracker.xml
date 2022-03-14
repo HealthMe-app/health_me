@@ -140,36 +140,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameMonth" />
 
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/blackoutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_alpha"
+        android:visibility="gone" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/btnMedicine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="12dp"
-        android:visibility="invisible"
         android:clickable="true"
         android:focusable="true"
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:src="@drawable/ic_medicine"
+        android:visibility="gone"
         app:backgroundTint="@color/dark_pink"
-        app:layout_constraintBottom_toTopOf="@+id/btnThermometer"
-        app:layout_constraintStart_toStartOf="@+id/btnCancel"
+        app:layout_constraintBottom_toTopOf="@+id/btnSymptom"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@android:color/white" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnThermometer"
+        android:id="@+id/btnSymptom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="12dp"
-        android:visibility="invisible"
         android:clickable="true"
         android:focusable="true"
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:src="@drawable/ic_thermometer"
+        android:visibility="gone"
         app:backgroundTint="@color/dark_pink"
         app:layout_constraintBottom_toTopOf="@+id/btnCancel"
         app:layout_constraintEnd_toEndOf="parent"
@@ -186,7 +192,7 @@
         android:focusable="true"
         android:minWidth="48dp"
         android:minHeight="48dp"
-        android:src="@drawable/ic_add"
+        android:src="@drawable/ic_plus"
         app:backgroundTint="@color/dark_pink"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -199,13 +205,14 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:clickable="true"
-        android:visibility="invisible"
         android:focusable="true"
         android:minWidth="48dp"
         android:minHeight="48dp"
-        android:src="@drawable/ic_cross_white"
-        android:backgroundTint="@color/dark_birch"
+        android:src="@drawable/ic_cross"
+        android:visibility="gone"
+        app:backgroundTint="@color/dark_birch"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

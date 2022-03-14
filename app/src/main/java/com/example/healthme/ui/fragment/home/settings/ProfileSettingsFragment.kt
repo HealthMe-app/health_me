@@ -20,9 +20,25 @@ class ProfileSettingsFragment : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.title = resources.getString(R.string.settings)
         _binding = FragmentProfileSettingsBinding.inflate(inflater, container, false)
 
-//        binding.toCalendarBtn.setOnClickListener {
-//            findNavController().navigate(R.id.to_addAppointment)
-//        }
+        binding.btnEditAvatar.setOnClickListener {
+            findNavController().navigate(R.id.to_changeAvatarFragment)
+        }
+
+        binding.frameProfile.setOnClickListener {
+            findNavController().navigate(R.id.to_changeProfileFragment)
+        }
+
+        binding.frameSecurity.setOnClickListener {
+            findNavController().navigate(R.id.to_securitySettingsFragment)
+        }
+
+        binding.frameNotification.setOnClickListener {
+            findNavController().navigate(R.id.to_notificationSettingsFragment)
+        }
+
+        binding.frameExit.setOnClickListener {
+            findNavController().navigate(R.id.to_logoutFragment)
+        }
 
         return binding.root
     }

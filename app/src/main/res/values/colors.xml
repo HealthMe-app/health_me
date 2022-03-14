@@ -11,8 +11,10 @@
     <color name="ultralight_birch">#DAEDE7</color>
     <color name="dark_pink">#C06471</color>
     <color name="light_pink">#F0D3C1</color>
+    <color name="ultralight_pink">#FDEEE4</color>
     <color name="dp_text">#BB5463</color>
     <color name="line">#BDBDBD</color>
     <color name="chemise_pink">#EEDDD3</color>
-    <color name="dark_grey">#828282</color>
+    <color name="dark_gray">#828282</color>
+    <color name="gray_alpha">#80777777</color>
 </resources>
