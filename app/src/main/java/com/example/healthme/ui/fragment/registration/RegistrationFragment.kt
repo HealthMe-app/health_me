@@ -14,8 +14,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.healthme.R
 import com.example.healthme.databinding.FragmentRegistrationBinding
 import com.example.healthme.repository.ApiRepository
-import com.example.healthme.ui.activity.MainViewModel
-import com.example.healthme.ui.activity.MainViewModelFactory
+import com.example.healthme.viewmodel.MainViewModel
+import com.example.healthme.viewmodel.MainViewModelFactory
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*

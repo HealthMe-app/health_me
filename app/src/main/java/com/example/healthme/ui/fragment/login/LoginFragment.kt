@@ -12,8 +12,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.healthme.R
 import com.example.healthme.databinding.FragmentLoginBinding
 import com.example.healthme.repository.ApiRepository
-import com.example.healthme.ui.activity.MainViewModel
-import com.example.healthme.ui.activity.MainViewModelFactory
+import com.example.healthme.viewmodel.MainViewModel
+import com.example.healthme.viewmodel.MainViewModelFactory
 
 class LoginFragment : Fragment() {
 

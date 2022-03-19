@@ -27,22 +27,15 @@
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_dark_pink_stroke_10.xml" value="0.2515" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_dark_pink_top_10.xml" value="0.2515" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_dialog_fragment.xml" value="0.2595" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_dict_row.xml" value="0.2225" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_et_dialog.xml" value="0.264" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_frame_calendar.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_frame_registration.xml" value="0.2595" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_gray_20.xml" value="0.2225" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_layout_calendar_settings.xml" value="0.2355" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_profile.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_recycler_row.xml" value="0.2595" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_search.xml" value="0.2225" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_ulight_birch_bottom45.xml" value="0.2225" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_ulight_birch_top30.xml" value="0.2225" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_white_10.xml" value="0.2225" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/bg_white_50.xml" value="0.2225" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_arrow.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_arrow_down.xml" value="0.2515" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_arrow_pink.xml" value="0.2225" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_arrow_up.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_arrow_up_red.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_bmenu_calendar.xml" value="0.1575" />
@@ -58,21 +51,18 @@
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_plus.xml" value="0.2245" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_plus_white.xml" value="0.231" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_search.xml" value="0.2595" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_search_close.xml" value="0.1035" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_symptom_circle.xml" value="0.1575" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_symptom_cough.xml" value="0.1575" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_symptom_cough_background.xml" value="0.1575" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_symptom_runny_nose.xml" value="0.1575" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_symptom_temperature.xml" value="0.1575" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/ic_vaccination.xml" value="0.1575" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/selector_arrow.xml" value="0.2225" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/selector_bg_birch_10.xml" value="0.2225" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/selector_bg_btn_calendar.xml" value="0.2595" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/selector_bg_registration.xml" value="0.2355" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/selector_calendar.xml" value="0.1575" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/drawable/selector_dict.xml" value="0.2225" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_add_appointment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_add_medicine.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_add_new_symptom.xml" value="0.264" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_add_symptom.xml" value="0.4" />
@@ -89,9 +79,7 @@
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_registration.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_symptom_cough.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_tracker.xml" value="0.4742468415937804" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_update_appointment.xml" value="0.18070652173913043" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_welcome.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/medicine_recycler_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/layout/row_calendar_settings.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/menu/bottom_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/fishi/AndroidStudioProjects/health_me/app/src/main/res/menu/settings_menu.xml" value="0.25416666666666665" />
@@ -116,10 +104,8 @@
         <entry key="app/src/main/res/drawable/bg_lp_13.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/bg_profile.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/bg_recycler_row.xml" value="0.116" />
-        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.1335" />
         <entry key="app/src/main/res/drawable/ic_arrow.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_arrow_bottom.xml" value="0.116" />
-        <entry key="app/src/main/res/drawable/ic_arrow_dict.xml" value="0.1335" />
         <entry key="app/src/main/res/drawable/ic_arrow_red.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_arrow_up.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_arrow_up_red.xml" value="0.116" />
@@ -130,8 +116,6 @@
         <entry key="app/src/main/res/drawable/ic_cat_jessica_in_mask.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_circle.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_cross.xml" value="0.116" />
-        <entry key="app/src/main/res/drawable/ic_cross_birch.xml" value="0.1335" />
-        <entry key="app/src/main/res/drawable/ic_cross_white.xml" value="0.1335" />
         <entry key="app/src/main/res/drawable/ic_cursor.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_doctor.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_dot.xml" value="0.116" />
@@ -150,6 +134,7 @@
         <entry key="app/src/main/res/drawable/ic_stethoscope_select.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_to_calendar_btn.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_vaccination.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/selector_arrow.xml" value="0.1335" />
         <entry key="app/src/main/res/drawable/selector_bg_birch_10.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/selector_bg_birch_stroke_10.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/selector_bg_btn_calendar.xml" value="0.116" />
@@ -158,28 +143,25 @@
         <entry key="app/src/main/res/drawable/selector_home.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/selector_tracker.xml" value="0.116" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17037037037037037" />
-        <entry key="app/src/main/res/layout/fragment_add_medicine.xml" value="0.15942028985507245" />
-        <entry key="app/src/main/res/layout/fragment_add_new_symptom.xml" value="0.15942028985507245" />
-        <entry key="app/src/main/res/layout/fragment_add_notification.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_add_medicine.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_add_new_symptom.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_add_procedure.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_add_symptom.xml" value="0.15942028985507245" />
-        <entry key="app/src/main/res/layout/fragment_add_symptom_details.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layout/fragment_add_symptom.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_add_symptom_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_calendar_settings.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_change_profile.xml" value="0.15942028985507245" />
         <entry key="app/src/main/res/layout/fragment_dict.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.17037037037037037" />
-        <entry key="app/src/main/res/layout/fragment_logout.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_notification_settings.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layout/fragment_logout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_notifications_settings.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_profile_settings.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_recommended_settings.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/fragment_security_settings.xml" value="0.15942028985507245" />
-        <entry key="app/src/main/res/layout/fragment_tracker.xml" value="0.12" />
+        <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_tracker.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.18" />
         <entry key="app/src/main/res/layout/row_calendar_settings.xml" value="0.19375" />
-        <entry key="app/src/main/res/layout/row_medicine.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layout/row_notifications_settings.xml" value="0.22" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/settings_menu.xml" value="0.19375" />
       </map>

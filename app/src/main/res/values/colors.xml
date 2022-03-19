@@ -17,4 +17,7 @@
     <color name="chemise_pink">#EEDDD3</color>
     <color name="dark_gray">#828282</color>
     <color name="gray_alpha">#80777777</color>
+    <color name="orange">#FFAA76</color>
+    <color name="dark_orange">#FF9757</color>
+    <color name="middle_pink">#DF7483</color>
 </resources>

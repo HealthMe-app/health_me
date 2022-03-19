@@ -1,4 +1,4 @@
-package com.example.healthme.ui.activity
+package com.example.healthme.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

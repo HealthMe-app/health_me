@@ -146,29 +146,6 @@
         android:name="com.example.healthme.ui.fragment.tracker.AddMedicineFragment"
         android:label="AddMedicineFragment" />
     <dialog
-        android:id="@+id/addNewSymptomFragment"
-        android:name="com.example.healthme.ui.fragment.tracker.AddNewSymptomFragment"
-        android:label="AddNewSymptomFragment" />
-    <dialog
-        android:id="@+id/addSymptomDetailsFragment"
-        android:name="com.example.healthme.ui.fragment.tracker.AddSymptomDetailsFragment"
-        android:label="AddSymptomDetailsFragment" >
-        <action
-            android:id="@+id/action_addSymptomDetailsFragment_to_addNewSymptomFragment"
-            app:destination="@id/addNewSymptomFragment" />
-    </dialog>
-    <dialog
-        android:id="@+id/addSymptomFragment"
-        android:name="com.example.healthme.ui.fragment.tracker.AddSymptomFragment"
-        android:label="AddSymptomFragment" >
-        <action
-            android:id="@+id/to_addSymptomDetailsFragment"
-            app:destination="@id/addSymptomDetailsFragment" />
-        <action
-            android:id="@+id/to_addNewSymptomFragment"
-            app:destination="@id/addNewSymptomFragment" />
-    </dialog>
-    <dialog
         android:id="@+id/changeAvatarFragment"
         android:name="com.example.healthme.ui.fragment.home.settings.ChangeAvatarFragment"
         android:label="ChangeAvatarFragment" />
@@ -208,4 +185,8 @@
         android:id="@+id/logoutFragment"
         android:name="com.example.healthme.ui.fragment.home.settings.LogoutFragment"
         android:label="LogoutFragment" />
+    <dialog
+        android:id="@+id/addSymptomFragment"
+        android:name="com.example.healthme.ui.fragment.tracker.AddSymptomFragment"
+        android:label="AddSymptomFragment" />
 </navigation>

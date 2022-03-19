@@ -3,10 +3,14 @@ package com.example.healthme.ui.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.healthme.R
 import com.example.healthme.databinding.ActivityMainBinding
+import com.example.healthme.repository.ApiRepository
+import com.example.healthme.viewmodel.MainViewModel
+import com.example.healthme.viewmodel.MainViewModelFactory
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -28,9 +32,11 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         NavigationUI.setupWithNavController(bottomNav, navHostFragment.navController)
 
-//        val repository = Repository()
-//        val viewModelFactory = MainViewModelFactory(repository)
-//        viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
+        val repository = ApiRepository()
+        val viewModelFactory = MainViewModelFactory(repository)
+        viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
+
+
 //
 //        viewModel.register(
 //            "lol2@email.ru",

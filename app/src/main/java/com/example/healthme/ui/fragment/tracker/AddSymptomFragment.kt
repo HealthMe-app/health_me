@@ -2,6 +2,7 @@ package com.example.healthme.ui.fragment.tracker
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
@@ -19,12 +20,9 @@ class AddSymptomFragment : DialogFragment() {
     ): View {
         _binding = FragmentAddSymptomBinding.inflate(inflater, container, false)
 
-        binding.btnNext.setOnClickListener {
-            findNavController().navigate(R.id.to_addSymptomDetailsFragment)
-        }
-
-        binding.btnAdd.setOnClickListener {
-            findNavController().navigate(R.id.to_addNewSymptomFragment)
+        binding.btnSave.setOnClickListener {
+            Toast.makeText(requireContext(), "Запись добавлена успешно", Toast.LENGTH_LONG).show()
+            dialog?.cancel()
         }
 
         binding.btnCancel.setOnClickListener {

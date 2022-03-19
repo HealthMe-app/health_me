@@ -27,7 +27,6 @@ class DictFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        setHasOptionsMenu(true)
         (activity as AppCompatActivity).supportActionBar?.title = resources.getString(R.string.dict)
         _binding = FragmentDictBinding.inflate(inflater, container, false)
         binding.recyclerView.adapter = adapter
@@ -86,7 +85,7 @@ class DictFragment : Fragment() {
 
         if (query.isNotEmpty()) {
             binding.recyclerView.visibility = View.VISIBLE
-            mMedicineViewModel.searchDatabase(searchQuery).observe(this, { list ->
+            mMedicineViewModel.searchDatabase(searchQuery).observe(this) { list ->
                 list.let {
                     if (it.isEmpty())
                         binding.notFound.visibility = View.VISIBLE
@@ -94,7 +93,7 @@ class DictFragment : Fragment() {
                         binding.notFound.visibility = View.INVISIBLE
                     adapter.setData(it)
                 }
-            })
+            }
         } else binding.recyclerView.visibility = View.INVISIBLE
     }
 

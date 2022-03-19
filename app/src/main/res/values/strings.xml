@@ -114,4 +114,6 @@
     <string name="logout_text">Вы действительно хотите выйти из аккаунта?</string>
     <string name="no">Нет</string>
     <string name="yes">Да</string>
+    <string name="symptoms_name">Название симптома</string>
+    <string name="severity">Степень тяжести</string>
 </resources>
