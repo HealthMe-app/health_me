@@ -7,7 +7,7 @@ import retrofit2.http.*
 
 interface Api {
 
-    @GET("api/user/")
+    @GET("auth/user/")
     suspend fun getUser(@Header("Authorization") token: String): Response<User>
 
     @FormUrlEncoded

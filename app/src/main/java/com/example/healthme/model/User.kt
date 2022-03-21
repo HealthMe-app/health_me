@@ -1,5 +1,7 @@
 package com.example.healthme.model
 
+import androidx.room.ColumnInfo
+
 data class User(
     val id: Int,
     val email: String,

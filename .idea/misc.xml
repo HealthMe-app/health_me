@@ -143,10 +143,11 @@
         <entry key="app/src/main/res/drawable/selector_home.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/selector_tracker.xml" value="0.116" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17037037037037037" />
-        <entry key="app/src/main/res/layout/fragment_add_medicine.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_add_medicine.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_add_new_symptom.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_add_notification.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_add_procedure.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_add_symptom.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_add_symptom.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_add_symptom_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_calendar_settings.xml" value="0.22" />
@@ -161,9 +162,15 @@
         <entry key="app/src/main/res/layout/fragment_tracker.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.18" />
         <entry key="app/src/main/res/layout/row_calendar_settings.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/row_closet_appointment.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layout/row_medicine.xml" value="0.1" />
         <entry key="app/src/main/res/layout/row_notifications_settings.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/row_symptom.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layout/row_timeline.xml" value="0.15942028985507245" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/settings_menu.xml" value="0.19375" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1335" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>

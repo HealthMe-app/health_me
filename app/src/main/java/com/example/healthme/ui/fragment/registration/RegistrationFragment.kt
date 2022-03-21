@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.preference.PreferenceManager
 import com.example.healthme.R
 import com.example.healthme.databinding.FragmentRegistrationBinding
 import com.example.healthme.repository.ApiRepository
@@ -34,8 +35,11 @@ class RegistrationFragment : Fragment() {
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
         val repository = ApiRepository()
-        val viewModelFactory = MainViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
+        val viewModelFactory = MainViewModelFactory(
+            PreferenceManager.getDefaultSharedPreferences(requireActivity()),
+            repository
+        )
+        viewModel = ViewModelProvider(activity!!, viewModelFactory)[MainViewModel::class.java]
 
         val gender = resources.getStringArray(R.array.gender)
         val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, gender)
@@ -101,8 +105,6 @@ class RegistrationFragment : Fragment() {
                     val errorText =
                         response.errorBody()!!.string().substringAfter("[\"").dropLast(3)
                     Toast.makeText(requireContext(), errorText, Toast.LENGTH_LONG).show()
-                    Log.e("Error Response", errorText)
-                    Log.e("Error Response", response.code().toString())
                 }
             }
         } else {

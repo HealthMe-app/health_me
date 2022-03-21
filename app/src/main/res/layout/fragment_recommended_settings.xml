@@ -62,6 +62,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameDoctors" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameDoctors" />
+
     <FrameLayout
         android:id="@+id/frameSurvey"
         android:layout_width="300dp"

@@ -2,13 +2,13 @@ package com.example.healthme.ui.fragment.login
 
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.preference.PreferenceManager
 import com.example.healthme.R
 import com.example.healthme.databinding.FragmentLoginBinding
 import com.example.healthme.repository.ApiRepository
@@ -29,8 +29,11 @@ class LoginFragment : Fragment() {
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
         val repository = ApiRepository()
-        val viewModelFactory = MainViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
+        val viewModelFactory = MainViewModelFactory(
+            PreferenceManager.getDefaultSharedPreferences(requireActivity()),
+            repository
+        )
+        viewModel = ViewModelProvider(activity!!, viewModelFactory)[MainViewModel::class.java]
 
         binding.toRegistrationBtn.setOnClickListener {
             findNavController().navigate(R.id.to_registrationFragment)
@@ -56,8 +59,6 @@ class LoginFragment : Fragment() {
                     val errorText =
                         response.errorBody()?.string()?.substringAfter("[\"")?.dropLast(3)
                     Toast.makeText(requireContext(), errorText, Toast.LENGTH_LONG).show()
-                    Log.e("Error Response", errorText.toString())
-                    Log.e("Error Response", response.code().toString())
                 }
             }
         } else {
