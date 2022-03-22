@@ -20,7 +20,8 @@ class AddNotificationFragment : DialogFragment() {
         _binding = FragmentAddNotificationBinding.inflate(inflater, container, false)
 
         binding.btnSave.setOnClickListener {
-            Toast.makeText(requireContext(), "Уведомление добавлено успешно", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Уведомление добавлено успешно", Toast.LENGTH_LONG)
+                .show()
         }
 
         binding.btnCancel.setOnClickListener {

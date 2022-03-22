@@ -17,7 +17,8 @@ class ProfileSettingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        (activity as AppCompatActivity).supportActionBar?.title = resources.getString(R.string.settings)
+        (activity as AppCompatActivity).supportActionBar?.title =
+            resources.getString(R.string.settings)
         _binding = FragmentProfileSettingsBinding.inflate(inflater, container, false)
 
         binding.btnEditAvatar.setOnClickListener {

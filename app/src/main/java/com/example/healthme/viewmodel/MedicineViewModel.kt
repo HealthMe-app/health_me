@@ -7,7 +7,7 @@ import com.example.healthme.data.medicine.MedicineDatabase
 import com.example.healthme.model.Medicine
 import com.example.healthme.repository.MedicineRepository
 
-class MedicineViewModel(application: Application): AndroidViewModel(application) {
+class MedicineViewModel(application: Application) : AndroidViewModel(application) {
 
     val readAllData: LiveData<List<Medicine>>
     private val repository: MedicineRepository

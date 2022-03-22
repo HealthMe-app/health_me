@@ -16,6 +16,9 @@ import com.example.healthme.ui.activity.MainActivity
 import com.example.healthme.viewmodel.MainViewModel
 import com.example.healthme.viewmodel.MainViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
+import java.time.LocalDate
+import java.time.Period
+import kotlin.random.Random
 
 class HomeFragment : Fragment() {
 
@@ -41,6 +44,9 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(activity!!, viewModelFactory)[MainViewModel::class.java]
         checkAuthorizationUser()
 
+        val reminders = resources.getStringArray(R.array.reminders)
+        binding.txtReminder.text = reminders[Random.nextInt(reminders.size)]
+
         binding.btnAddAppointment.setOnClickListener {
             findNavController().navigate(R.id.to_addAppointmentFragment)
         }
@@ -58,14 +64,23 @@ class HomeFragment : Fragment() {
                 if (response.isSuccessful) {
                     binding.tvName.text = response.body()?.first_name
                     binding.tvGender.text = response.body()?.sex.toString()
-                    binding.tvAge.text = response.body()?.date_of_birth
+                    binding.tvAge.text = response.body()?.date_of_birth?.let { getAge(it) }
                 } else {
-                    val errorText = response.errorBody()?.string()?.substringAfter(":\"")?.dropLast(3)
+                    val errorText =
+                        response.errorBody()?.string()?.substringAfter(":\"")?.dropLast(3)
                     Log.e("Error Response", errorText.toString())
                     findNavController().navigate(R.id.to_welcomeFragment)
                 }
             })
         } else findNavController().navigate(R.id.to_welcomeFragment)
+    }
+
+    private fun getAge(date: String): String {
+        val yearMonthDay = date.split("-")
+        return Period.between(
+            LocalDate.of(yearMonthDay[0].toInt(), yearMonthDay[1].toInt(), yearMonthDay[2].toInt()),
+            LocalDate.now()
+        ).years.toString()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

@@ -3,11 +3,12 @@ package com.example.healthme.ui.fragment.registration
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.view.*
+import android.view.inputmethod.InputMethodManager
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -26,6 +27,11 @@ class RegistrationFragment : Fragment() {
     private var _binding: FragmentRegistrationBinding? = null
     private val binding: FragmentRegistrationBinding get() = _binding!!
     private lateinit var viewModel: MainViewModel
+    private lateinit var dateToServer: String
+
+    private val formatDate: DateTimeFormatter = DateTimeFormatter.ofPattern("d.M.yyyy")
+    private val formatUser: DateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+    private val formatServer: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,6 +60,10 @@ class RegistrationFragment : Fragment() {
             register()
         }
 
+        binding.registrationGender.setOnClickListener {
+            hideKeyboard()
+        }
+
         return binding.root
     }
 
@@ -67,7 +77,11 @@ class RegistrationFragment : Fragment() {
             val datePickerDialog = DatePickerDialog(
                 requireContext(), R.style.DialogTheme,
                 DatePickerDialog.OnDateSetListener { _, mYear, mMonth, mDay ->
-                    binding.registrationDateOfBirth.setText("$mDay.$mMonth.$mYear")
+                    val date = LocalDate.parse("$mDay.$mMonth.$mYear", formatDate)
+                        .format(formatUser).toString()
+                    dateToServer = LocalDate.parse("$mDay.$mMonth.$mYear", formatDate)
+                        .format(formatServer).toString()
+                    binding.registrationDateOfBirth.setText(date)
                 }, year, month, day
             )
             datePickerDialog.show()
@@ -85,21 +99,16 @@ class RegistrationFragment : Fragment() {
         // if gender is female, set true
         val gender =
             binding.registrationGender.text.toString() == resources.getStringArray(R.array.gender)[1]
-        var date = binding.registrationDateOfBirth.text.toString()
-
-        // convert date from user format to server format
-        if (date.isNotEmpty()) {
-            val formatUser = DateTimeFormatter.ofPattern("d.M.yyyy")
-            val formatServer = DateTimeFormatter.ofPattern("yyyy-MM-dd")
-            date = LocalDate.parse(date, formatUser).format(formatServer).toString()
-        }
+        val date = dateToServer
 
         if (inputCheck(name, email, password, date)) {
             viewModel.register(email, name, gender, date, password)
             viewModel.myResponseUserInfo.observe(requireActivity()) { response ->
                 if (response.isSuccessful) {
-                    Toast.makeText(requireContext(), "Регистрация прошла успешно",
-                        Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        requireContext(), "Регистрация прошла успешно",
+                        Toast.LENGTH_LONG
+                    ).show()
                     findNavController().navigate(R.id.to_homeFragment)
                 } else {
                     val errorText =
@@ -108,7 +117,7 @@ class RegistrationFragment : Fragment() {
                 }
             }
         } else {
-            Toast.makeText(requireContext(),"Заполните все поля", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Заполните все поля", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -120,6 +129,13 @@ class RegistrationFragment : Fragment() {
     ): Boolean {
         return !(TextUtils.isEmpty(name) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)
                 || TextUtils.isEmpty(date) || binding.registrationGender.text.isEmpty())
+    }
+
+    private fun hideKeyboard() {
+        val inputMethodManager =
+            ContextCompat.getSystemService(requireContext(), InputMethodManager::class.java)
+        if (inputMethodManager!!.isActive)
+            inputMethodManager.hideSoftInputFromWindow(binding.root.windowToken, 0)
     }
 
     override fun onDestroyView() {

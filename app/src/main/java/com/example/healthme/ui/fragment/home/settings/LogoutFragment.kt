@@ -1,7 +1,6 @@
 package com.example.healthme.ui.fragment.home.settings
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -55,15 +54,12 @@ class LogoutFragment : DialogFragment() {
     }
 
     private fun logout() {
-//        val userToken = viewModel.userToken.value.toString()
-//        Log.e("Error Response", userToken)
         viewModel.logout()
         viewModel.myResponseString.observe(this, Observer { response ->
             if (response.isSuccessful) {
                 dialog?.cancel()
                 findNavController().navigate(R.id.to_welcomeFragment)
-            }
-            else {
+            } else {
                 val errorText = response.errorBody()?.string()?.substringAfter(":\"")?.dropLast(3)
                 Toast.makeText(requireContext(), errorText, Toast.LENGTH_LONG).show()
             }

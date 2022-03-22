@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:text="@string/about_account_question"
-            android:textColor="@color/birch"
+            android:textColor="@color/db_text"
             android:textSize="18sp" />
 
         <TextView
@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/offer_to_register"
-            android:textColor="@color/db_text"
+            android:textColor="@color/birch"
             android:textSize="18sp" />
     </LinearLayout>
 

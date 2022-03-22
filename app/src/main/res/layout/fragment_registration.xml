@@ -52,7 +52,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="34dp"
         android:hint="@string/name"
-        android:inputType="textPersonName"
+        android:inputType="textCapWords"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageJessicaInMaskRegistration" />
@@ -74,6 +74,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:hint="@string/password"
+        android:imeOptions="actionDone"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,11 +86,11 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:textColorHint="@color/dark_birch"
         android:background="@drawable/bg_white_10"
-        app:hintEnabled="false"
+        android:textColorHint="@color/dark_birch"
         app:endIconDrawable="@drawable/selector_arrow"
         app:endIconTint="@color/dark_pink"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registrationPassword">
@@ -110,11 +111,11 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:textColorHint="@color/dark_birch"
         android:background="@drawable/bg_white_10"
-        app:hintEnabled="false"
+        android:textColorHint="@color/dark_birch"
         app:endIconDrawable="@drawable/ic_arrow_pink"
         app:endIconTint="@color/dark_pink"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/genderLayout">
@@ -154,7 +155,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:text="@string/have_account"
-            android:textColor="@color/birch"
+            android:textColor="@color/db_text"
             android:textSize="18sp" />
 
         <TextView
@@ -162,7 +163,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/offer_to_enter"
-            android:textColor="@color/db_text"
+            android:textColor="@color/birch"
             android:textSize="18sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

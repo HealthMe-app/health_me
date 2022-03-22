@@ -17,7 +17,8 @@ class CalendarFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        (activity as AppCompatActivity).supportActionBar?.title = resources.getString(R.string.calendar)
+        (activity as AppCompatActivity).supportActionBar?.title =
+            resources.getString(R.string.calendar)
         setHasOptionsMenu(true)
         _binding = FragmentCalendarBinding.inflate(inflater, container, false)
 

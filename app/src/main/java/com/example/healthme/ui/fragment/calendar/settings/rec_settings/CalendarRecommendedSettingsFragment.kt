@@ -17,7 +17,8 @@ class CalendarRecommendedSettingsFragment : DialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        (activity as AppCompatActivity).supportActionBar?.title = resources.getString(R.string.calendar_settings)
+        (activity as AppCompatActivity).supportActionBar?.title =
+            resources.getString(R.string.calendar_settings)
         _binding = FragmentRecommendedSettingsBinding.inflate(inflater, container, false)
 
         binding.btnSave.setOnClickListener {

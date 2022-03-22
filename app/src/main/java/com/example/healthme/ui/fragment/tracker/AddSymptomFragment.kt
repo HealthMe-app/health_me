@@ -5,7 +5,6 @@ import android.view.*
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.DialogFragment
-import androidx.navigation.fragment.findNavController
 import com.example.healthme.R
 import com.example.healthme.databinding.FragmentAddSymptomBinding
 

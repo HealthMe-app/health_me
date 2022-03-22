@@ -72,17 +72,6 @@
     <string name="address">Адрес</string>
     <string name="update_appointment">Редактировать запись</string>
     <string name="delete">Удалить</string>
-
-    <string-array name="gender">
-        <item>Мужской</item>
-        <item>Женский</item>
-    </string-array>
-
-    <string-array name="appointmentTypes">
-        <item>Запись к врачу</item>
-        <item>Процедура</item>
-        <item>Обследование</item>
-    </string-array>
     <string name="symptom_cough">Симптом: кашель</string>
     <string name="dry">Сухой</string>
     <string name="wet">Влажный</string>
@@ -117,6 +106,32 @@
     <string name="symptoms_name">Название симптома</string>
     <string name="severity">Степень тяжести</string>
 
+    <string-array name="gender">
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
 
+    <string-array name="appointmentTypes">
+        <item>Запись к врачу</item>
+        <item>Процедура</item>
+        <item>Обследование</item>
+    </string-array>
+
+    <string-array name="reminders">
+        <item>Больше двигайтесь!</item>
+        <item>Старайтесь соблюдать режим сна</item>
+        <item>Медитация и йога — лучшие способы расслабиться</item>
+        <item>Придерживайтесь сбалансированного питания</item>
+        <item>Выпрямите спину!</item>
+        <item>При сидячей работе делайте перерывы на разминку</item>
+        <item>Не забывайте мыть руки!</item>
+        <item>Регулярно проветривайте помещение</item>
+        <item>Не игнорируйте свой дискомфорт</item>
+        <item>Соблюдайте социальную дистанцию!</item>
+        <item>Не забывайте о правилах ношения масок</item>
+        <item>Выполняйте предписания врача!</item>
+        <item>Не подавляйте свои эмоции</item>
+        <item>Пейте больше воды</item>
+    </string-array>
 
 </resources>

@@ -27,9 +27,11 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.medName.text = currentItem.name
 
         holder.itemView.medName_frame.setOnClickListener {
-            var visible = if (holder.itemView.medIndication_frame.isGone) View.VISIBLE else View.GONE
+            var visible =
+                if (holder.itemView.medIndication_frame.isGone) View.VISIBLE else View.GONE
             holder.itemView.medIndication_frame.visibility = visible
-            visible = if (holder.itemView.medContraindication_frame.isGone) View.VISIBLE else View.GONE
+            visible =
+                if (holder.itemView.medContraindication_frame.isGone) View.VISIBLE else View.GONE
             holder.itemView.medContraindication_frame.visibility = visible
             visible = if (holder.itemView.medSideEffects_frame.isGone) View.VISIBLE else View.GONE
             holder.itemView.medSideEffects_frame.visibility = visible
@@ -53,7 +55,8 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         }
 
         holder.itemView.medIndication_frame.setOnClickListener {
-            val visible = if (holder.itemView.medIndication_txt_frame.isGone) View.VISIBLE else View.GONE
+            val visible =
+                if (holder.itemView.medIndication_txt_frame.isGone) View.VISIBLE else View.GONE
             holder.itemView.medIndication_txt_frame.visibility = visible
             holder.itemView.medIndication_txt.text = currentItem.indication
 
@@ -62,7 +65,8 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         }
 
         holder.itemView.medContraindication_frame.setOnClickListener {
-            val visible = if (holder.itemView.medContraindication_txt_frame.isGone) View.VISIBLE else View.GONE
+            val visible =
+                if (holder.itemView.medContraindication_txt_frame.isGone) View.VISIBLE else View.GONE
             holder.itemView.medContraindication_txt_frame.visibility = visible
             holder.itemView.medContraindication_txt.text = currentItem.contraIndication
 
@@ -71,7 +75,8 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         }
 
         holder.itemView.medSideEffects_frame.setOnClickListener {
-            val visible = if (holder.itemView.medSideEffects_txt_frame.isGone) View.VISIBLE else View.GONE
+            val visible =
+                if (holder.itemView.medSideEffects_txt_frame.isGone) View.VISIBLE else View.GONE
             holder.itemView.medSideEffects_txt_frame.visibility = visible
             holder.itemView.medSideEffects_txt.text = currentItem.sideEffects
 
@@ -80,7 +85,8 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         }
 
         holder.itemView.medDosage_frame.setOnClickListener {
-            val visible = if (holder.itemView.medDosage_txt_frame.isGone) View.VISIBLE else View.GONE
+            val visible =
+                if (holder.itemView.medDosage_txt_frame.isGone) View.VISIBLE else View.GONE
             holder.itemView.medDosage_txt_frame.visibility = visible
             holder.itemView.medDosage_txt.text = currentItem.dosage
 

@@ -3,7 +3,6 @@ package com.example.healthme.ui.fragment.tracker
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.healthme.R
@@ -18,7 +17,8 @@ class TrackerFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        (activity as AppCompatActivity).supportActionBar?.title = resources.getString(R.string.tracker)
+        (activity as AppCompatActivity).supportActionBar?.title =
+            resources.getString(R.string.tracker)
         setHasOptionsMenu(true)
         _binding = FragmentTrackerBinding.inflate(inflater, container, false)
 

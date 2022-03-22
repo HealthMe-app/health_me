@@ -10,12 +10,14 @@ import com.example.healthme.repository.ApiRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
-class MainViewModel(private val sharedPreferences: SharedPreferences, private val apiRepository: ApiRepository) : ViewModel(){
+class MainViewModel(
+    private val sharedPreferences: SharedPreferences,
+    private val apiRepository: ApiRepository
+) : ViewModel() {
 
     val myResponse: MutableLiveData<Response<User>> = MutableLiveData()
     val myResponseUserInfo: MutableLiveData<Response<UserInfo>> = MutableLiveData()
     val myResponseString: MutableLiveData<Response<String>> = MutableLiveData()
-//    var userToken: MutableLiveData<String> = MutableLiveData()
     val user: MutableLiveData<User> = MutableLiveData()
 
     fun getUser(): Boolean {
