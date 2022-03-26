@@ -96,9 +96,13 @@ class RegistrationFragment : Fragment() {
         val name = binding.registrationName.text.toString()
         val email = binding.registrationEmail.text.toString()
         val password = binding.registrationPassword.text.toString()
-        // if gender is female, set true
+        // male - 1, female - 2
         val gender =
-            binding.registrationGender.text.toString() == resources.getStringArray(R.array.gender)[1]
+            if (binding.registrationGender.text.toString() == resources.getStringArray(R.array.gender)[1])
+                '2'
+            else
+                '1'
+
         val date = dateToServer
 
         if (inputCheck(name, email, password, date)) {

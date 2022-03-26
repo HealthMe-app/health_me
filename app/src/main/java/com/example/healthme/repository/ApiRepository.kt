@@ -12,7 +12,7 @@ class ApiRepository {
     }
 
     suspend fun register(
-        email: String, first_name: String, sex: Boolean, date_of_birth: String,
+        email: String, first_name: String, sex: Char, date_of_birth: String,
         password: String
     ): Response<UserInfo> {
         return RetrofitInstance.api.register(email, first_name, sex, date_of_birth, password)

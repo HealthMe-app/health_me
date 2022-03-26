@@ -105,6 +105,8 @@
     <string name="yes">Да</string>
     <string name="symptoms_name">Название симптома</string>
     <string name="severity">Степень тяжести</string>
+    <string name="gen">Пол:</string>
+    <string name="age">Возраст: %d лет</string>
 
     <string-array name="gender">
         <item>Мужской</item>

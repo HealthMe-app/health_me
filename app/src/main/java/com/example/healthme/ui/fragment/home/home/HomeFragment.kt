@@ -13,6 +13,7 @@ import com.example.healthme.R
 import com.example.healthme.databinding.FragmentHomeBinding
 import com.example.healthme.repository.ApiRepository
 import com.example.healthme.ui.activity.MainActivity
+import com.example.healthme.util.Util.fetchSvg
 import com.example.healthme.viewmodel.MainViewModel
 import com.example.healthme.viewmodel.MainViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
@@ -63,8 +64,15 @@ class HomeFragment : Fragment() {
             viewModel.myResponse.observe(this, Observer { response ->
                 if (response.isSuccessful) {
                     binding.tvName.text = response.body()?.first_name
-                    binding.tvGender.text = response.body()?.sex.toString()
-                    binding.tvAge.text = response.body()?.date_of_birth?.let { getAge(it) }
+                    binding.tvGender.text = getString(R.string.gen).plus(" ").plus(
+                        if (response.body()?.sex == '1') "мужской"
+                        else "женский"
+                    )
+                    response.body()?.sex.toString()
+                    binding.tvAge.text =
+                        getString(R.string.age, getAge(response.body()!!.date_of_birth))
+
+//                    fetchSvg(requireContext(), response.body()!!.pic, binding.profilePic)
                 } else {
                     val errorText =
                         response.errorBody()?.string()?.substringAfter(":\"")?.dropLast(3)
@@ -75,12 +83,12 @@ class HomeFragment : Fragment() {
         } else findNavController().navigate(R.id.to_welcomeFragment)
     }
 
-    private fun getAge(date: String): String {
+    private fun getAge(date: String): Int {
         val yearMonthDay = date.split("-")
         return Period.between(
             LocalDate.of(yearMonthDay[0].toInt(), yearMonthDay[1].toInt(), yearMonthDay[2].toInt()),
             LocalDate.now()
-        ).years.toString()
+        ).years
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

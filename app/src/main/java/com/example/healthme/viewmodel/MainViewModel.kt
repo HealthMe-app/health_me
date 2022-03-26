@@ -34,7 +34,7 @@ class MainViewModel(
     }
 
     fun register(
-        email: String, first_name: String, sex: Boolean, date_of_birth: String,
+        email: String, first_name: String, sex: Char, date_of_birth: String,
         password: String
     ) {
         viewModelScope.launch {

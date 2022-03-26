@@ -2,6 +2,7 @@ package com.example.healthme.api
 
 import com.example.healthme.model.User
 import com.example.healthme.model.UserInfo
+import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -15,7 +16,7 @@ interface Api {
     suspend fun register(
         @Field("email") email: String,
         @Field("first_name") first_name: String,
-        @Field("sex") sex: Boolean,
+        @Field("sex") sex: Char,
         @Field("date_of_birth") date_of_birth: String,
         @Field("password") password: String
     ): Response<UserInfo>
