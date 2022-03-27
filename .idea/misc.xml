@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health_me/app/src/main/res/layout/calendar_cell.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Oligator/AndroidStudioProjects/health_me/app/src/main/res/layout/fragment_tracker.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/healthme/app/src/main/res/drawable/ic_add.xml" value="0.2595" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/healthme/app/src/main/res/drawable/ic_add1.xml" value="0.2595" />
         <entry key="..\:/Users/Oligator/AndroidStudioProjects/healthme/app/src/main/res/layout/fragment_calendar.xml" value="0.20108695652173914" />
