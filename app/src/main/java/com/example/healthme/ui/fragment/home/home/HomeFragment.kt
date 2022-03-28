@@ -3,17 +3,20 @@ package com.example.healthme.ui.fragment.home.home
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.preference.PreferenceManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.healthme.R
 import com.example.healthme.databinding.FragmentHomeBinding
 import com.example.healthme.repository.ApiRepository
 import com.example.healthme.ui.activity.MainActivity
-import com.example.healthme.util.Util.fetchSvg
+import com.example.healthme.ui.fragment.calendar.calendar.CalendarFragmentDirections
 import com.example.healthme.viewmodel.MainViewModel
 import com.example.healthme.viewmodel.MainViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
@@ -26,6 +29,7 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding: FragmentHomeBinding get() = _binding!!
     private lateinit var viewModel: MainViewModel
+    private val adapter = ListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,8 +52,13 @@ class HomeFragment : Fragment() {
         val reminders = resources.getStringArray(R.array.reminders)
         binding.txtReminder.text = reminders[Random.nextInt(reminders.size)]
 
+        binding.recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        getClosetAppointments()
+
         binding.btnAddAppointment.setOnClickListener {
-            findNavController().navigate(R.id.to_addAppointmentFragment)
+            val action = CalendarFragmentDirections.toAddAppointmentFragment( "home")
+            findNavController().navigate(action)
         }
 
         binding.btnAddSymptom.setOnClickListener {
@@ -89,6 +98,27 @@ class HomeFragment : Fragment() {
             LocalDate.of(yearMonthDay[0].toInt(), yearMonthDay[1].toInt(), yearMonthDay[2].toInt()),
             LocalDate.now()
         ).years
+    }
+
+    private fun getClosetAppointments() {
+        viewModel.getClosetAppointments()
+        viewModel.myResponseClosetAppointments.observe(this, Observer { response ->
+            if (response.isSuccessful) {
+                if (response.body()?.size != 0) {
+                    binding.recyclerView.visibility = View.VISIBLE
+                    binding.nullClosestAppointments.visibility = View.GONE
+                    response.body()?.let { adapter.setData(it) }
+                } else {
+                    binding.recyclerView.visibility = View.GONE
+                    binding.nullClosestAppointments.visibility = View.VISIBLE
+                }
+            } else {
+                Log.e("Response", response.errorBody()?.string()!!)
+//                val errorText = response.errorBody()?.string()?.substringAfter(":\"")?.dropLast(3)
+                Toast.makeText(requireContext(), response.errorBody()?.string(), Toast.LENGTH_LONG)
+                    .show()
+            }
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

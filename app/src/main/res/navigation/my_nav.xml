@@ -145,11 +145,34 @@
     <dialog
         android:id="@+id/addAppointmentFragment"
         android:name="com.example.healthme.ui.fragment.calendar.appointment.add.AddAppointmentFragment"
-        android:label="AddAppointmentFragment" />
+        android:label="AddAppointmentFragment" >
+        <action
+            android:id="@+id/to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+        <argument
+            android:name="parentFragment"
+            app:argType="string" />
+    </dialog>
     <dialog
         android:id="@+id/updateAppointmentFragment"
         android:name="com.example.healthme.ui.fragment.calendar.appointment.update.UpdateAppointmentFragment"
-        android:label="UpdateAppointmentFragment" />
+        android:label="UpdateAppointmentFragment" >
+        <argument
+            android:name="currentAppointmentID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+        <argument
+            android:name="parentFragment"
+            app:argType="string" />
+    </dialog>
     <dialog
         android:id="@+id/addProcedureFragment"
         android:name="com.example.healthme.ui.fragment.calendar.settings.add.AddProcedureFragment"

@@ -55,16 +55,30 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         android:importantForAutofill="no" />
 
-    <EditText
-        android:id="@+id/update_appointmentDate"
-        style="@style/EdittextStyle"
-        android:layout_marginTop="16dp"
-        android:hint="@string/date_and_time"
-        android:inputType="datetime"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateTimeLayout"
+        style="@style/DropdownMenu"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_white_10"
+        android:textColorHint="@color/dark_birch"
+        app:endIconDrawable="@drawable/selector_arrow"
+        app:endIconTint="@color/dark_pink"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/update_appointmentName"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/update_appointmentName">
+
+        <AutoCompleteTextView
+            android:id="@+id/appointmentDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/date_and_time"
+            android:inputType="none"
+            android:textColor="@color/dark_birch"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
         android:id="@+id/update_appointmentAddress"
@@ -73,11 +87,11 @@
         android:inputType="textCapSentences"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/update_appointmentDate"
+        app:layout_constraintTop_toBottomOf="@+id/dateTimeLayout"
         android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/update_appointmentNote"
+        android:id="@+id/update_appointmentComment"
         style="@style/EdittextStyle"
         android:hint="@string/note"
         android:inputType="textCapSentences"
@@ -90,13 +104,13 @@
         android:id="@+id/btnCancel"
         style="@style/CancelButtonStyle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/update_appointmentNote" />
+        app:layout_constraintTop_toBottomOf="@+id/update_appointmentComment" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSave"
         style="@style/SaveButtonStyle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/update_appointmentNote" />
+        app:layout_constraintTop_toBottomOf="@+id/update_appointmentComment" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnDelete"

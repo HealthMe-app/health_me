@@ -27,7 +27,7 @@ class RegistrationFragment : Fragment() {
     private var _binding: FragmentRegistrationBinding? = null
     private val binding: FragmentRegistrationBinding get() = _binding!!
     private lateinit var viewModel: MainViewModel
-    private lateinit var dateToServer: String
+    private var dateToServer: String = ""
 
     private val formatDate: DateTimeFormatter = DateTimeFormatter.ofPattern("d.M.yyyy")
     private val formatUser: DateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
@@ -77,9 +77,9 @@ class RegistrationFragment : Fragment() {
             val datePickerDialog = DatePickerDialog(
                 requireContext(), R.style.DialogTheme,
                 DatePickerDialog.OnDateSetListener { _, mYear, mMonth, mDay ->
-                    val date = LocalDate.parse("$mDay.$mMonth.$mYear", formatDate)
+                    val date = LocalDate.parse("$mDay.${mMonth + 1}.$mYear", formatDate)
                         .format(formatUser).toString()
-                    dateToServer = LocalDate.parse("$mDay.$mMonth.$mYear", formatDate)
+                    dateToServer = LocalDate.parse("$mDay.${mMonth + 1}.$mYear", formatDate)
                         .format(formatServer).toString()
                     binding.registrationDateOfBirth.setText(date)
                 }, year, month, day

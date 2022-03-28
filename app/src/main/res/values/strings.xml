@@ -24,7 +24,7 @@
     <string name="add_appointment">Добавить запись на приём</string>
     <string name="add_symptom">Добавить симптом</string>
     <string name="closest_appointments">Ближайшие записи</string>
-    <string name="null_closest_appointments">У вас нет записей на ближайшие 3 дня</string>
+    <string name="null_closest_appointments">У вас нет записей на ближайшие 2 дня</string>
     <string name="appointments">Записи на приём</string>
     <string name="timeline">График посещений</string>
     <string name="personalData">Личные данные</string>
@@ -107,6 +107,7 @@
     <string name="severity">Степень тяжести</string>
     <string name="gen">Пол:</string>
     <string name="age">Возраст: %d лет</string>
+    <string name="no_appointment">На сегодня записей нет =)</string>
 
     <string-array name="gender">
         <item>Мужской</item>
@@ -114,9 +115,9 @@
     </string-array>
 
     <string-array name="appointmentTypes">
-        <item>Запись к врачу</item>
-        <item>Процедура</item>
+        <item>Консультация</item>
         <item>Обследование</item>
+        <item>Прививка</item>
     </string-array>
 
     <string-array name="reminders">

@@ -15,7 +15,6 @@ import okhttp3.Request
 import okhttp3.Response
 import com.pixplicity.sharp.Sharp
 
-
 object Util {
     // for dict fragment
     @JvmStatic
@@ -49,7 +48,7 @@ object Util {
         val request: Request = Request.Builder().url(url).build()
         httpClient!!.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
-                target.setImageResource(R.drawable.ic_cat_jessica_in_mask)
+                target.setImageResource(R.drawable.ic_cross)
             }
 
             @Throws(IOException::class)
