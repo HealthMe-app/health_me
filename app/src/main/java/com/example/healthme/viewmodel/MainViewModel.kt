@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.healthme.model.Appointment
+import com.example.healthme.model.Note
 import com.example.healthme.model.User
 import com.example.healthme.model.UserInfo
 import com.example.healthme.repository.ApiRepository
@@ -24,17 +25,25 @@ class MainViewModel(
     val myResponseAppointments: MutableLiveData<Response<List<Appointment>>> = MutableLiveData()
     val myResponseClosetAppointments: MutableLiveData<Response<List<Appointment>>> =
         MutableLiveData()
-//    val user: MutableLiveData<User> = MutableLiveData()
+
+    val myResponseNote: MutableLiveData<Response<Note>> = MutableLiveData()
+    val myResponseNotes: MutableLiveData<Response<List<Note>>> = MutableLiveData()
+
+    private var userToken: String? = null
 
     // auth methods
 
     fun getUser(): Boolean {
         val token = sharedPreferences.getString("token", null)
-        return if (token != null) {
+        return if (token != null || userToken != null) {
             viewModelScope.launch {
-                val response = apiRepository.getUser("Token $token")
-//                user.postValue(response.body())
-                myResponse.value = response
+                if (token != null) {
+                    val response = apiRepository.getUser("Token $token")
+                    myResponse.value = response
+                } else {
+                    val response = apiRepository.getUser("Token $userToken")
+                    myResponse.value = response
+                }
             }
             true
         } else
@@ -50,7 +59,7 @@ class MainViewModel(
     ) {
         viewModelScope.launch {
             val response = apiRepository.register(email, first_name, sex, date_of_birth, password)
-//            user.postValue(response.body()?.user)
+            userToken = response.body()?.token.toString()
             sharedPreferences.edit().putString("token", response.body()!!.token).apply()
             myResponseUserInfo.value = response
         }
@@ -59,7 +68,7 @@ class MainViewModel(
     fun login(email: String, password: String) {
         viewModelScope.launch {
             val response = apiRepository.login(email, password)
-//            user.postValue(response.body()?.user)
+            userToken = response.body()?.token.toString()
             sharedPreferences.edit().putString("token", response.body()!!.token).apply()
             myResponseUserInfo.value = response
         }
@@ -71,6 +80,7 @@ class MainViewModel(
             val response = apiRepository.logout("Token $token")
             myResponseString.value = response
             sharedPreferences.edit().clear().apply()
+            userToken = null
         }
     }
 
@@ -148,6 +158,48 @@ class MainViewModel(
         val token = sharedPreferences.getString("token", null)
         viewModelScope.launch {
             val response = apiRepository.deleteAppointment("Token $token", id)
+            myResponseString.value = response
+        }
+    }
+
+    // api note methods
+
+    fun addNote(ntype: Int, name: String, date_time: String, comment: String) {
+        val token = sharedPreferences.getString("token", null)
+        viewModelScope.launch {
+            val response = apiRepository.addNote("Token $token", ntype, name, date_time, comment)
+            myResponseNote.value = response
+        }
+    }
+
+    fun getNotesToDate(date: String) {
+        val token = sharedPreferences.getString("token", null)
+        viewModelScope.launch {
+            val response = apiRepository.getNotesToDate("Token $token", date)
+            myResponseNotes.value = response
+        }
+    }
+
+    fun getNote(id: Int) {
+        val token = sharedPreferences.getString("token", null)
+        viewModelScope.launch {
+            val response = apiRepository.getNote("Token $token", id)
+            myResponseNote.value = response
+        }
+    }
+
+    fun updateNote(id: Int, ntype: Int, name: String, date_time: String, comment: String) {
+        val token = sharedPreferences.getString("token", null)
+        viewModelScope.launch {
+            val response = apiRepository.updateNote("Token $token", id, ntype, name, date_time, comment)
+            myResponseNote.value = response
+        }
+    }
+
+    fun deleteNote(id: Int) {
+        val token = sharedPreferences.getString("token", null)
+        viewModelScope.launch {
+            val response = apiRepository.deleteNote("Token $token", id)
             myResponseString.value = response
         }
     }

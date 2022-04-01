@@ -52,7 +52,8 @@
     <string name="ic_plus_description">The picture shows a plus.</string>
     <string name="ic_cross_description">The picture shows a cross.</string>
     <string name="ic_dot_description">The figure shows a dot.</string>
-    <string name="add_medicine">Добавить приём лекарств</string>
+    <string name="add_medicine">Добавить приём лекарства</string>
+    <string name="update_medicine">Редактировать приём лекарства</string>
     <string name="date_and_time">Дата и время</string>
     <string name="name_of_medicine">Название препарата</string>
     <string name="note">Заметка</string>
@@ -108,6 +109,7 @@
     <string name="gen">Пол:</string>
     <string name="age">Возраст: %d лет</string>
     <string name="no_appointment">На сегодня записей нет =)</string>
+    <string name="update_symptom">Редактировать симптом</string>
 
     <string-array name="gender">
         <item>Мужской</item>
@@ -118,6 +120,21 @@
         <item>Консультация</item>
         <item>Обследование</item>
         <item>Прививка</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
     </string-array>
 
     <string-array name="reminders">

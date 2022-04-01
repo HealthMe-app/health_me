@@ -15,7 +15,7 @@
         android:background="@color/dark_pink"
         android:gravity="center"
         android:paddingVertical="20dp"
-        android:text="@string/add_symptom"
+        android:text="@string/update_appointment"
         android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -65,8 +65,8 @@
             android:minWidth="48dp"
             android:minHeight="48dp"
             android:src="@drawable/ic_mild_severity"
-            app:elevation="10dp"
             app:backgroundTint="@color/birch"
+            app:elevation="10dp"
             app:tint="@android:color/white" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -80,8 +80,8 @@
             android:minWidth="48dp"
             android:minHeight="48dp"
             android:src="@drawable/ic_average_severity"
-            app:elevation="10dp"
             app:backgroundTint="@color/orange"
+            app:elevation="10dp"
             app:tint="@android:color/white" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -95,8 +95,8 @@
             android:minWidth="48dp"
             android:minHeight="48dp"
             android:src="@drawable/ic_severe_severity"
-            app:elevation="10dp"
             app:backgroundTint="@color/middle_pink"
+            app:elevation="10dp"
             app:tint="@android:color/white" />
 
     </FrameLayout>
@@ -104,8 +104,8 @@
     <EditText
         android:id="@+id/trackerName"
         style="@style/EdittextStyle"
-        android:layout_marginTop="0dp"
         android:layout_gravity="center"
+        android:layout_marginTop="0dp"
         android:hint="@string/symptoms_name"
         android:importantForAutofill="no"
         android:inputType="textCapSentences"
@@ -160,5 +160,14 @@
         style="@style/SaveButtonStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/trackerComment" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDelete"
+        style="@style/CancelButtonStyle"
+        android:text="@string/delete"
+        android:layout_marginStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCancel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

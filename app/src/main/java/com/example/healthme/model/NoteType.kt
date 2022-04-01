@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class AppointmentType(
+data class NoteType(
     val id: Int,
     val name: String,
     val icon: String,

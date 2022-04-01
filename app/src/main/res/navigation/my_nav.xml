@@ -97,7 +97,7 @@
         tools:layout="@layout/fragment_dict" />
     <fragment
         android:id="@+id/trackerFragment"
-        android:name="com.example.healthme.ui.fragment.tracker.TrackerFragment"
+        android:name="com.example.healthme.ui.fragment.tracker.tracker.TrackerFragment"
         android:label="fragment_tracker"
         tools:layout="@layout/fragment_tracker" >
         <action
@@ -106,6 +106,12 @@
         <action
             android:id="@+id/to_addSymptomFragment"
             app:destination="@id/addSymptomFragment" />
+        <action
+            android:id="@+id/to_updateMedicineFragment"
+            app:destination="@id/updateMedicineFragment" />
+        <action
+            android:id="@+id/to_updateSymptomFragment"
+            app:destination="@id/updateSymptomFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileSettingsFragment"
@@ -179,8 +185,12 @@
         android:label="AddProcedureFragment" />
     <dialog
         android:id="@+id/addMedicineFragment"
-        android:name="com.example.healthme.ui.fragment.tracker.AddMedicineFragment"
-        android:label="AddMedicineFragment" />
+        android:name="com.example.healthme.ui.fragment.tracker.medicine.AddMedicineFragment"
+        android:label="AddMedicineFragment" >
+        <action
+            android:id="@+id/to_trackerFragment"
+            app:destination="@id/trackerFragment" />
+    </dialog>
     <dialog
         android:id="@+id/changeAvatarFragment"
         android:name="com.example.healthme.ui.fragment.home.settings.ChangeAvatarFragment"
@@ -229,6 +239,38 @@
     </dialog>
     <dialog
         android:id="@+id/addSymptomFragment"
-        android:name="com.example.healthme.ui.fragment.tracker.AddSymptomFragment"
-        android:label="AddSymptomFragment" />
+        android:name="com.example.healthme.ui.fragment.tracker.symptom.AddSymptomFragment"
+        android:label="AddSymptomFragment" >
+        <action
+            android:id="@+id/to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/to_trackerFragment"
+            app:destination="@id/trackerFragment" />
+        <argument
+            android:name="parentFragment"
+            app:argType="string" />
+    </dialog>
+    <dialog
+        android:id="@+id/updateMedicineFragment"
+        android:name="com.example.healthme.ui.fragment.tracker.medicine.UpdateMedicineFragment"
+        android:label="UpdateMedicineFragment" >
+        <argument
+            android:name="currentNoteID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/to_trackerFragment"
+            app:destination="@id/trackerFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/updateSymptomFragment"
+        android:name="com.example.healthme.ui.fragment.tracker.symptom.UpdateSymptomFragment"
+        android:label="UpdateSymptomFragment" >
+        <argument
+            android:name="currentNoteID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/to_trackerFragment"
+            app:destination="@id/trackerFragment" />
+    </dialog>
 </navigation>

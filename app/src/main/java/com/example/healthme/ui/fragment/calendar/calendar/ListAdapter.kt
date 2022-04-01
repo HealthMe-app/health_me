@@ -33,7 +33,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.date.text = currentItem.date_time.substringAfter('T').substringBeforeLast(':')
 
         val context: Context = holder.itemView.context
-        fetchSvg(context, BASE_URL + currentItem.ptype.icon, holder.itemView.imageType)
+        fetchSvg(context, BASE_URL + currentItem.ptype.icon_pink, holder.itemView.imageType)
 
         holder.itemView.rowLayout.setOnClickListener {
             val action = CalendarFragmentDirections.toUpdateAppointmentFragment(currentItem.id, "calendar")

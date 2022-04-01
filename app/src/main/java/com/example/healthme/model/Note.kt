@@ -4,10 +4,11 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class AppointmentType(
+data class Note(
     val id: Int,
+    val ntype: NoteType,
+    val user: User,
     val name: String,
-    val icon: String,
-    val icon_pink: String,
-    val icon_birch: String
+    val date_time: String,
+    var comment: String
 ): Parcelable

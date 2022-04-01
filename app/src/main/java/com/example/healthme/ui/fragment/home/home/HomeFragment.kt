@@ -17,6 +17,7 @@ import com.example.healthme.databinding.FragmentHomeBinding
 import com.example.healthme.repository.ApiRepository
 import com.example.healthme.ui.activity.MainActivity
 import com.example.healthme.ui.fragment.calendar.calendar.CalendarFragmentDirections
+import com.example.healthme.ui.fragment.tracker.tracker.TrackerFragmentDirections
 import com.example.healthme.viewmodel.MainViewModel
 import com.example.healthme.viewmodel.MainViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
@@ -62,7 +63,8 @@ class HomeFragment : Fragment() {
         }
 
         binding.btnAddSymptom.setOnClickListener {
-            findNavController().navigate(R.id.to_addSymptomFragment)
+            val action = TrackerFragmentDirections.toAddSymptomFragment( "home")
+            findNavController().navigate(action)
         }
 
         return binding.root

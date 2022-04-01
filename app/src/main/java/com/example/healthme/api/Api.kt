@@ -1,6 +1,7 @@
 package com.example.healthme.api
 
 import com.example.healthme.model.Appointment
+import com.example.healthme.model.Note
 import com.example.healthme.model.User
 import com.example.healthme.model.UserInfo
 import retrofit2.Call
@@ -34,7 +35,7 @@ interface Api {
     @POST("auth/logout/")
     suspend fun logout(@Header("Authorization") token: String): Response<String>
 
-    // api methods
+    // api appointment methods
 
     @FormUrlEncoded
     @POST("api/appointment/")
@@ -80,5 +81,47 @@ interface Api {
     suspend fun deleteAppointment(
         @Header("Authorization") token: String,
         @Path("appointmentID") id: Int
+    ): Response<String>
+
+    // api note methods
+
+    @FormUrlEncoded
+    @POST("api/note/")
+    suspend fun addNote(
+        @Header("Authorization") token: String,
+        @Field("ntype") ntype: Int,
+        @Field("name") name: String,
+        @Field("date_time") date_time: String,
+        @Field("comment") comment: String
+    ): Response<Note>
+
+    @FormUrlEncoded
+    @POST("api/notes")
+    suspend fun getNotesToDate(
+        @Header("Authorization") token: String,
+        @Field("date") date: String
+    ): Response<List<Note>>
+
+    @GET("api/note/{noteID}")
+    suspend fun getNote(
+        @Header("Authorization") token: String,
+        @Path("noteID") id: Int
+    ): Response<Note>
+
+    @FormUrlEncoded
+    @PUT("api/note/{noteID}")
+    suspend fun updateNote(
+        @Header("Authorization") token: String,
+        @Path("noteID") id: Int,
+        @Field("ntype") ntype: Int,
+        @Field("name") name: String,
+        @Field("date_time") date_time: String,
+        @Field("comment") comment: String
+    ): Response<Note>
+
+    @DELETE("api/note/{noteID}")
+    suspend fun deleteNote(
+        @Header("Authorization") token: String,
+        @Path("noteID") id: Int
     ): Response<String>
 }

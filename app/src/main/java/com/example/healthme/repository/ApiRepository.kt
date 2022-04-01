@@ -2,6 +2,7 @@ package com.example.healthme.repository
 
 import com.example.healthme.api.RetrofitInstance
 import com.example.healthme.model.Appointment
+import com.example.healthme.model.Note
 import com.example.healthme.model.User
 import com.example.healthme.model.UserInfo
 import retrofit2.Response
@@ -74,5 +75,40 @@ class ApiRepository {
 
     suspend fun deleteAppointment(token: String, id: Int): Response<String> {
         return RetrofitInstance.api.deleteAppointment(token, id)
+    }
+
+    // api appointment methods
+
+    suspend fun addNote(
+        token: String,
+        ntype: Int,
+        name: String,
+        date_time: String,
+        comment: String
+    ): Response<Note> {
+        return RetrofitInstance.api.addNote(token, ntype, name, date_time, comment)
+    }
+
+    suspend fun getNotesToDate(token: String, date: String): Response<List<Note>> {
+        return RetrofitInstance.api.getNotesToDate(token, date)
+    }
+
+    suspend fun getNote(token: String, id: Int): Response<Note> {
+        return RetrofitInstance.api.getNote(token, id)
+    }
+
+    suspend fun updateNote(
+        token: String,
+        id: Int,
+        ntype: Int,
+        name: String,
+        date_time: String,
+        comment: String
+    ): Response<Note> {
+        return RetrofitInstance.api.updateNote(token, id, ntype, name, date_time, comment)
+    }
+
+    suspend fun deleteNote(token: String, id: Int): Response<String> {
+        return RetrofitInstance.api.deleteNote(token, id)
     }
 }
