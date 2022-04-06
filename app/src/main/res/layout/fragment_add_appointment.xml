@@ -64,7 +64,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/bg_white_10"
         android:textColorHint="@color/dark_birch"
-        app:endIconDrawable="@drawable/selector_arrow"
+        app:endIconDrawable="@drawable/ic_arrow_pink"
         app:endIconTint="@color/dark_pink"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"

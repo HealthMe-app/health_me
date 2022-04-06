@@ -58,7 +58,8 @@ class LoginFragment : Fragment() {
                 } else {
                     val errorText =
                         response.errorBody()?.string()?.substringAfter("[\"")?.dropLast(3)
-                    Toast.makeText(requireContext(), errorText, Toast.LENGTH_LONG).show()
+                    if (errorText != "")
+                        Toast.makeText(requireContext(), errorText, Toast.LENGTH_LONG).show()
                 }
             }
         } else {

@@ -30,9 +30,10 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.name.text = currentItem.name
         val dateTime = LocalDate.parse(currentItem.date_time, formatDateServer)
         holder.itemView.dayOfMonth.text = dateTime.dayOfMonth.toString()
-        holder.itemView.month.text = dateTime.month.toString()
-        holder.itemView.dayOfWeekTime.text =
-            "${dateTime.dayOfWeek}, ${currentItem.date_time.substringAfter('T').substringBeforeLast(':')}"
+        holder.itemView.month.text = holder.itemView.resources.getStringArray(R.array.month)[dateTime.monthValue - 1]
+        var dayOfWeekTime = holder.itemView.resources.getStringArray(R.array.dayOfWeek)[dateTime.dayOfWeek.value - 1]
+        dayOfWeekTime += ", ${currentItem.date_time.substringAfter('T').substringBeforeLast(':')}"
+        holder.itemView.dayOfWeekTime.text = dayOfWeekTime
 
         holder.itemView.rowLayout.setOnClickListener {
             val action = HomeFragmentDirections.toUpdateAppointmentFragment(currentItem.id, "home")

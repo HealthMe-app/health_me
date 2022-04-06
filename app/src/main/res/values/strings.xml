@@ -137,6 +137,16 @@
         <item>Декабрь</item>
     </string-array>
 
+    <string-array name="dayOfWeek">
+        <item>Понедельник</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+        <item>Пятница</item>
+        <item>Суббота</item>
+        <item>Воскресенье</item>
+    </string-array>
+
     <string-array name="reminders">
         <item>Больше двигайтесь!</item>
         <item>Старайтесь соблюдать режим сна</item>

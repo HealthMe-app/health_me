@@ -50,7 +50,13 @@ class RegistrationFragment : Fragment() {
         val gender = resources.getStringArray(R.array.gender)
         val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, gender)
         binding.registrationGender.setAdapter(arrayAdapter)
-        setDate()
+
+        binding.dateOfBirthLayout.setEndIconOnClickListener {
+            setDate()
+        }
+        binding.registrationDateOfBirth.setOnClickListener {
+            setDate()
+        }
 
         binding.toAuthorizationBtn.setOnClickListener {
             findNavController().navigate(R.id.to_loginFragment)
@@ -73,23 +79,21 @@ class RegistrationFragment : Fragment() {
         val month = calendar.get(Calendar.MONTH)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
 
-        binding.registrationDateOfBirth.setOnClickListener {
-            val datePickerDialog = DatePickerDialog(
-                requireContext(), R.style.DialogTheme,
-                DatePickerDialog.OnDateSetListener { _, mYear, mMonth, mDay ->
-                    val date = LocalDate.parse("$mDay.${mMonth + 1}.$mYear", formatDate)
-                        .format(formatUser).toString()
-                    dateToServer = LocalDate.parse("$mDay.${mMonth + 1}.$mYear", formatDate)
-                        .format(formatServer).toString()
-                    binding.registrationDateOfBirth.setText(date)
-                }, year, month, day
-            )
-            datePickerDialog.show()
-            datePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE)
-                .setTextColor(resources.getColor(R.color.dark_pink))
-            datePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE)
-                .setTextColor(resources.getColor(R.color.birch))
-        }
+        val datePickerDialog = DatePickerDialog(
+            requireContext(), R.style.DialogTheme,
+            DatePickerDialog.OnDateSetListener { _, mYear, mMonth, mDay ->
+                val date = LocalDate.parse("$mDay.${mMonth + 1}.$mYear", formatDate)
+                    .format(formatUser).toString()
+                dateToServer = LocalDate.parse("$mDay.${mMonth + 1}.$mYear", formatDate)
+                    .format(formatServer).toString()
+                binding.registrationDateOfBirth.setText(date)
+            }, year, month, day
+        )
+        datePickerDialog.show()
+        datePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE)
+            .setTextColor(resources.getColor(R.color.dark_pink))
+        datePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE)
+            .setTextColor(resources.getColor(R.color.birch))
     }
 
     private fun register() {
@@ -117,7 +121,8 @@ class RegistrationFragment : Fragment() {
                 } else {
                     val errorText =
                         response.errorBody()!!.string().substringAfter("[\"").dropLast(3)
-                    Toast.makeText(requireContext(), errorText, Toast.LENGTH_LONG).show()
+                    if (errorText != "")
+                        Toast.makeText(requireContext(), errorText, Toast.LENGTH_LONG).show()
                 }
             }
         } else {

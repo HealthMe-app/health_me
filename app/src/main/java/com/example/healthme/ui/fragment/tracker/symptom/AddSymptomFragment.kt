@@ -51,9 +51,15 @@ class AddSymptomFragment : DialogFragment() {
             repository
         )
         viewModel = ViewModelProvider(activity!!, viewModelFactory)[MainViewModel::class.java]
-        setDate()
         setSeverity()
         binding.trackerDateTime.setHintTextColor(resources.getColor(R.color.dark_birch))
+
+        binding.dateTimeLayout.setEndIconOnClickListener {
+            setDate()
+        }
+        binding.trackerDateTime.setOnClickListener {
+            setDate()
+        }
 
         binding.btnSave.setOnClickListener {
             insertDataToQuery()
@@ -115,38 +121,36 @@ class AddSymptomFragment : DialogFragment() {
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
         val minute = calendar.get(Calendar.MINUTE)
 
-        binding.trackerDateTime.setOnClickListener {
-            val timePickerDialog = TimePickerDialog(
-                requireContext(), R.style.DialogTheme,
-                TimePickerDialog.OnTimeSetListener { _, mHour, mMinute ->
-                    val time =
-                        (if (mHour < 10) "0$mHour" else mHour.toString()) + ":" + (if (mMinute < 10) "0$mMinute" else mMinute.toString())
-                    binding.trackerDateTime.setText(
-                        binding.trackerDateTime.text.toString().plus(" $time")
-                    )
-                }, hour, minute,
-                DateFormat.is24HourFormat(requireContext())
-            )
-            timePickerDialog.show()
-            timePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE)
-                .setTextColor(resources.getColor(R.color.dark_pink))
-            timePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE)
-                .setTextColor(resources.getColor(R.color.birch))
+        val timePickerDialog = TimePickerDialog(
+            requireContext(), R.style.DialogTheme,
+            TimePickerDialog.OnTimeSetListener { _, mHour, mMinute ->
+                val time =
+                    (if (mHour < 10) "0$mHour" else mHour.toString()) + ":" + (if (mMinute < 10) "0$mMinute" else mMinute.toString())
+                binding.trackerDateTime.setText(
+                    binding.trackerDateTime.text.toString().plus(" $time")
+                )
+            }, hour, minute,
+            DateFormat.is24HourFormat(requireContext())
+        )
+        timePickerDialog.show()
+        timePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE)
+            .setTextColor(resources.getColor(R.color.dark_pink))
+        timePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE)
+            .setTextColor(resources.getColor(R.color.birch))
 
-            val datePickerDialog = DatePickerDialog(
-                requireContext(), R.style.DialogTheme,
-                DatePickerDialog.OnDateSetListener { _, mYear, mMonth, mDay ->
-                    val date = LocalDate.parse("$mDay.${mMonth + 1}.$mYear", formatDate)
-                        .format(formatDateUser).toString()
-                    binding.trackerDateTime.setText(date)
-                }, year, month, day
-            )
-            datePickerDialog.show()
-            datePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE)
-                .setTextColor(resources.getColor(R.color.dark_pink))
-            datePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE)
-                .setTextColor(resources.getColor(R.color.birch))
-        }
+        val datePickerDialog = DatePickerDialog(
+            requireContext(), R.style.DialogTheme,
+            DatePickerDialog.OnDateSetListener { _, mYear, mMonth, mDay ->
+                val date = LocalDate.parse("$mDay.${mMonth + 1}.$mYear", formatDate)
+                    .format(formatDateUser).toString()
+                binding.trackerDateTime.setText(date)
+            }, year, month, day
+        )
+        datePickerDialog.show()
+        datePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE)
+            .setTextColor(resources.getColor(R.color.dark_pink))
+        datePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE)
+            .setTextColor(resources.getColor(R.color.birch))
     }
 
     private fun insertDataToQuery() {
