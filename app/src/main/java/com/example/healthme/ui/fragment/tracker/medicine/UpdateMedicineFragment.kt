@@ -172,6 +172,7 @@ class UpdateMedicineFragment : DialogFragment() {
                 Toast.makeText(requireContext(), "Запись удалена успешно", Toast.LENGTH_LONG)
                     .show()
                 dialog?.cancel()
+                findNavController().navigate(R.id.to_trackerFragment)
             } else {
                 val errorText = response.errorBody()?.string()?.substringAfter(":\"")?.dropLast(3)
                 Toast.makeText(requireContext(), errorText, Toast.LENGTH_LONG).show()

@@ -106,7 +106,9 @@
         <entry key="app/src/main/res/drawable/bg_profile.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/bg_recycler_row.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_arrow.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_arrow_birch.xml" value="0.11" />
         <entry key="app/src/main/res/drawable/ic_arrow_bottom.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/ic_arrow_left.xml" value="0.11" />
         <entry key="app/src/main/res/drawable/ic_arrow_red.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_arrow_up.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/ic_arrow_up_red.xml" value="0.116" />

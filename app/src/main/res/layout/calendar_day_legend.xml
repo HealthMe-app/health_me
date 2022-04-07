@@ -15,7 +15,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="ПН"
-        android:textColor="@color/db_text"
+        android:textColor="@color/birch"
         android:textSize="14sp" />
 
     <TextView
@@ -25,7 +25,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="ВТ"
-        android:textColor="@color/db_text"
+        android:textColor="@color/birch"
         android:textSize="14sp" />
 
     <TextView
@@ -35,7 +35,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="СР"
-        android:textColor="@color/db_text"
+        android:textColor="@color/birch"
         android:textSize="14sp" />
 
     <TextView
@@ -45,7 +45,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="ЧТ"
-        android:textColor="@color/db_text"
+        android:textColor="@color/birch"
         android:textSize="14sp" />
 
     <TextView
@@ -55,7 +55,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="ПТ"
-        android:textColor="@color/db_text"
+        android:textColor="@color/birch"
         android:textSize="14sp" />
 
     <TextView
@@ -65,7 +65,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="СБ"
-        android:textColor="@color/db_text"
+        android:textColor="@color/birch"
         android:textSize="14sp" />
 
     <TextView
@@ -75,7 +75,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="ВС"
-        android:textColor="@color/db_text"
+        android:textColor="@color/birch"
         android:textSize="14sp" />
 
 </LinearLayout>
