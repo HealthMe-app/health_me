@@ -29,6 +29,8 @@ import com.kizitonwose.calendarview.model.InDateStyle
 import com.kizitonwose.calendarview.ui.DayBinder
 import com.kizitonwose.calendarview.ui.ViewContainer
 import com.kizitonwose.calendarview.utils.yearMonth
+import kotlinx.android.synthetic.main.calendar_day_layout.*
+import kotlinx.android.synthetic.main.calendar_day_layout.view.*
 import java.time.DayOfWeek
 import java.time.LocalDate
 import java.time.YearMonth
@@ -61,6 +63,7 @@ class TrackerFragment : Fragment() {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+//        getNotes()
         getNotesToDate(today.toString())
 
         binding.btnAdd.setOnClickListener {
@@ -100,9 +103,25 @@ class TrackerFragment : Fragment() {
         binding.btnMedicine.hide()
     }
 
+    private fun getNotes() {
+        viewModel.getNotes()
+        viewModel.myResponseNotes.observe(this, Observer { response ->
+            if (response.isSuccessful) {
+                if (response.body()?.size != 0) {
+                    Toast.makeText(requireContext(), response.body()?.size!!, Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(requireContext(), response.body()?.size!!.toString() + "zero", Toast.LENGTH_LONG).show()
+                }
+            } else {
+                val errorText = response.errorBody()?.string()?.substringAfter(":\"")?.dropLast(3)
+                Toast.makeText(requireContext(), errorText, Toast.LENGTH_LONG).show()
+            }
+        })
+    }
+
     private fun getNotesToDate(currentDate: String) {
         viewModel.getNotesToDate(currentDate)
-        viewModel.myResponseNotes.observe(this, Observer { response ->
+        viewModel.myResponseNotesToDate.observe(this, Observer { response ->
             if (response.isSuccessful) {
                 if (response.body()?.size != 0) {
                     binding.recyclerView.visibility = View.VISIBLE
@@ -131,6 +150,7 @@ class TrackerFragment : Fragment() {
         class DayViewContainer(view: View) : ViewContainer(view) {
             lateinit var day: CalendarDay
             val textView = CalendarDayLayoutBinding.bind(view).dayText
+            val dotView = CalendarDayLayoutBinding.bind(view).dotView
 
             init {
                 textView.setOnClickListener {
@@ -161,19 +181,23 @@ class TrackerFragment : Fragment() {
                         selectedDate -> {
                             textView.setTextColor(resources.getColor(R.color.white))
                             textView.setBackgroundResource(R.drawable.bg_dark_pink_10)
+                            container.dotView.visibility = View.INVISIBLE
                         }
                         today -> {
                             textView.setTextColor(resources.getColor(R.color.dark_pink))
                             textView.background = null
+                            container.dotView.visibility = View.INVISIBLE
                         }
                         else -> {
                             textView.setTextColor(resources.getColor(R.color.dark_birch))
                             textView.background = null
+                            container.dotView.visibility = View.INVISIBLE
                         }
                     }
                 } else {
                     textView.setTextColor(resources.getColor(R.color.gray))
                     textView.background = null
+                    container.dotView.visibility = View.INVISIBLE
                 }
             }
         }
@@ -210,7 +234,7 @@ class TrackerFragment : Fragment() {
             maxRowCount = 1,
             hasBoundaries = false
         )
-        binding.calendarView.scrollToDate(selectedDate!!)
+        binding.calendarView.scrollToDate(selectedDate)
 
         binding.trackerLayout.setOnTouchListener(object : OnSwipeTouchListener(requireContext()) {
             override fun onSwipeTop() {
@@ -218,7 +242,7 @@ class TrackerFragment : Fragment() {
             }
 
             override fun onSwipeBottom() {
-                binding.currentMonth.text = resources.getStringArray(R.array.month)[selectedDate!!.monthValue - 1]
+                binding.currentMonth.text = resources.getStringArray(R.array.month)[selectedDate.monthValue - 1]
                 swipeToWeekMode(false)
                 binding.currentMonth.layoutParams.width = ConstraintLayout.LayoutParams.WRAP_CONTENT
             }
@@ -261,14 +285,14 @@ class TrackerFragment : Fragment() {
             }
 
             if (monthToWeek) {
-                binding.calendarView.scrollToDate(selectedDate!!)
+                binding.calendarView.scrollToDate(selectedDate)
             } else {
                 if (firstDate!!.yearMonth == lastDate!!.yearMonth) {
                     binding.calendarView.scrollToMonth(firstDate.yearMonth)
                 } else {
                     binding.calendarView.scrollToMonth(
                         minOf(
-                            selectedDate!!.yearMonth,
+                            selectedDate.yearMonth,
                             YearMonth.now().plusMonths(10)
                         )
                     )

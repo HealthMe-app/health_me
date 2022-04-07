@@ -27,6 +27,7 @@ class MainViewModel(
         MutableLiveData()
 
     val myResponseNote: MutableLiveData<Response<Note>> = MutableLiveData()
+    val myResponseNotesToDate: MutableLiveData<Response<List<Note>>> = MutableLiveData()
     val myResponseNotes: MutableLiveData<Response<List<Note>>> = MutableLiveData()
 
     private var userToken: String? = null
@@ -176,6 +177,14 @@ class MainViewModel(
         val token = sharedPreferences.getString("token", null)
         viewModelScope.launch {
             val response = apiRepository.getNotesToDate("Token $token", date)
+            myResponseNotesToDate.value = response
+        }
+    }
+
+    fun getNotes() {
+        val token = sharedPreferences.getString("token", null)
+        viewModelScope.launch {
+            val response = apiRepository.getNotes("Token $token")
             myResponseNotes.value = response
         }
     }

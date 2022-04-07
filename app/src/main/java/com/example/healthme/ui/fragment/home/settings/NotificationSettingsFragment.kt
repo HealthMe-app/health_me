@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.healthme.R
 import com.example.healthme.databinding.FragmentNotificationSettingsBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class NotificationSettingsFragment : Fragment() {
 
@@ -19,6 +20,7 @@ class NotificationSettingsFragment : Fragment() {
     ): View {
         (activity as AppCompatActivity).supportActionBar?.title =
             resources.getString(R.string.settings)
+        setHasOptionsMenu(true)
         _binding = FragmentNotificationSettingsBinding.inflate(inflater, container, false)
 
         binding.btnAdd.setOnClickListener {
@@ -26,6 +28,11 @@ class NotificationSettingsFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        findNavController().navigate(R.id.to_profileSettingsFragment)
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onDestroyView() {

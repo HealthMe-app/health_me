@@ -93,6 +93,10 @@ class ApiRepository {
         return RetrofitInstance.api.getNotesToDate(token, date)
     }
 
+    suspend fun getNotes(token: String): Response<List<Note>> {
+        return RetrofitInstance.api.getNotes(token)
+    }
+
     suspend fun getNote(token: String, id: Int): Response<Note> {
         return RetrofitInstance.api.getNote(token, id)
     }

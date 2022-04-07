@@ -102,6 +102,11 @@ interface Api {
         @Field("date") date: String
     ): Response<List<Note>>
 
+    @GET("api/notes")
+    suspend fun getNotes(
+        @Header("Authorization") token: String
+    ): Response<List<Note>>
+
     @GET("api/note/{noteID}")
     suspend fun getNote(
         @Header("Authorization") token: String,

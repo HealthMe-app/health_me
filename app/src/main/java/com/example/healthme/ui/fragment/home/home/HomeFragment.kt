@@ -38,6 +38,7 @@ class HomeFragment : Fragment() {
     ): View {
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
         (activity as MainActivity).btm_nav.visibility = View.VISIBLE
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
         (activity as AppCompatActivity).supportActionBar?.title = resources.getString(R.string.home)
         setHasOptionsMenu(true)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)

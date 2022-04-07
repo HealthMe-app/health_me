@@ -1,12 +1,16 @@
 package com.example.healthme.ui.fragment.home.settings
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.healthme.R
 import com.example.healthme.databinding.FragmentProfileSettingsBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class ProfileSettingsFragment : Fragment() {
 
@@ -20,6 +24,10 @@ class ProfileSettingsFragment : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.title =
             resources.getString(R.string.settings)
         _binding = FragmentProfileSettingsBinding.inflate(inflater, container, false)
+
+        (activity as AppCompatActivity).btm_nav.visibility = View.GONE
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        setHasOptionsMenu(true)
 
         binding.btnEditAvatar.setOnClickListener {
             findNavController().navigate(R.id.to_changeAvatarFragment)
@@ -42,6 +50,11 @@ class ProfileSettingsFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        findNavController().navigate(R.id.to_homeFragment)
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onDestroyView() {

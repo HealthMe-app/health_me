@@ -14,8 +14,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.healthme.R
 import com.example.healthme.databinding.FragmentCalendarBinding
 import com.example.healthme.repository.ApiRepository
+import com.example.healthme.ui.activity.MainActivity
 import com.example.healthme.viewmodel.MainViewModel
 import com.example.healthme.viewmodel.MainViewModelFactory
+import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -35,6 +37,8 @@ class CalendarFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        (activity as MainActivity).btm_nav.visibility = View.VISIBLE
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
         (activity as AppCompatActivity).supportActionBar?.title =
             resources.getString(R.string.calendar)
         setHasOptionsMenu(true)

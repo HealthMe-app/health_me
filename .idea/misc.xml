@@ -96,6 +96,7 @@
         <entry key="app/src/main/res/drawable/bg_calendar_recommended_settings_top.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/bg_checked_btn_calendar.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/bg_dark_birch_10.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/bg_day_tag.xml" value="0.11" />
         <entry key="app/src/main/res/drawable/bg_dialog_fragment.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/bg_et_dialog.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/bg_frame_calendar.xml" value="0.116" />
@@ -163,6 +164,7 @@
         <entry key="app/src/main/res/layout/fragment_profile_settings.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_recommended_settings.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_timeline.xml" value="0.16847826086956522" />
         <entry key="app/src/main/res/layout/fragment_tracker.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_update_appointment.xml" value="0.15217391304347827" />
         <entry key="app/src/main/res/layout/fragment_update_medicine.xml" value="0.16847826086956522" />
