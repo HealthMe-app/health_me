@@ -22,6 +22,7 @@ class MainViewModel(
     val myResponseString: MutableLiveData<Response<String>> = MutableLiveData()
 
     val myResponseAppointment: MutableLiveData<Response<Appointment>> = MutableLiveData()
+    val myResponseAppointmentsToDate: MutableLiveData<Response<List<Appointment>>> = MutableLiveData()
     val myResponseAppointments: MutableLiveData<Response<List<Appointment>>> = MutableLiveData()
     val myResponseClosetAppointments: MutableLiveData<Response<List<Appointment>>> =
         MutableLiveData()
@@ -112,6 +113,14 @@ class MainViewModel(
         val token = sharedPreferences.getString("token", null)
         viewModelScope.launch {
             val response = apiRepository.getAppointmentsToDate("Token $token", date)
+            myResponseAppointmentsToDate.value = response
+        }
+    }
+
+    fun getAppointments() {
+        val token = sharedPreferences.getString("token", null)
+        viewModelScope.launch {
+            val response = apiRepository.getAppointments("Token $token")
             myResponseAppointments.value = response
         }
     }

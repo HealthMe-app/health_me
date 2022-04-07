@@ -1,17 +1,12 @@
 package com.example.healthme.ui.fragment.tracker.tracker
 
-import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.animation.doOnEnd
-import androidx.core.animation.doOnStart
-import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -21,6 +16,7 @@ import com.example.healthme.R
 import com.example.healthme.databinding.CalendarDayLayoutBinding
 import com.example.healthme.databinding.FragmentTrackerBinding
 import com.example.healthme.repository.ApiRepository
+import com.example.healthme.util.Util.swipeToWeekMode
 import com.example.healthme.viewmodel.MainViewModel
 import com.example.healthme.viewmodel.MainViewModelFactory
 import com.kizitonwose.calendarview.model.CalendarDay
@@ -239,20 +235,27 @@ class TrackerFragment : Fragment() {
 
         binding.trackerLayout.setOnTouchListener(object : OnSwipeTouchListener(requireContext()) {
             override fun onSwipeTop() {
-                swipeToWeekMode(true)
+                if (binding.calendarView.maxRowCount == 6)
+                    swipeToWeekMode(binding.calendarView, true, selectedDate)
             }
 
             override fun onSwipeBottom() {
-                binding.currentMonth.text =
-                    resources.getStringArray(R.array.month)[selectedDate.monthValue - 1]
-                swipeToWeekMode(false)
-                binding.currentMonth.layoutParams.width = ConstraintLayout.LayoutParams.WRAP_CONTENT
+                if (binding.calendarView.maxRowCount == 1) {
+                    binding.currentMonth.text =
+                        resources.getStringArray(R.array.month)[selectedDate.monthValue - 1]
+                    swipeToWeekMode(binding.calendarView, false, selectedDate)
+                    binding.currentMonth.layoutParams.width = ConstraintLayout.LayoutParams.WRAP_CONTENT
+                }
             }
         })
 
         binding.arrowRight.setOnClickListener {
             if (binding.calendarView.maxRowCount == 1) {
-                binding.calendarView.smoothScrollToDate(binding.calendarView.findLastVisibleDay()?.date!!.plusDays(1))
+                binding.calendarView.smoothScrollToDate(
+                    binding.calendarView.findLastVisibleDay()?.date!!.plusDays(
+                        1
+                    )
+                )
             } else {
                 binding.calendarView.findFirstVisibleMonth()?.let {
                     binding.calendarView.smoothScrollToMonth(it.yearMonth.next)
@@ -262,67 +265,17 @@ class TrackerFragment : Fragment() {
 
         binding.arrowLeft.setOnClickListener {
             if (binding.calendarView.maxRowCount == 1) {
-                binding.calendarView.smoothScrollToDate(binding.calendarView.findFirstVisibleDay()?.date!!.minusDays(1))
+                binding.calendarView.smoothScrollToDate(
+                    binding.calendarView.findFirstVisibleDay()?.date!!.minusDays(
+                        1
+                    )
+                )
             } else {
                 binding.calendarView.findFirstVisibleMonth()?.let {
                     binding.calendarView.smoothScrollToMonth(it.yearMonth.previous)
                 }
             }
         }
-    }
-
-    fun swipeToWeekMode(monthToWeek: Boolean) {
-        val firstDate = binding.calendarView.findFirstVisibleDay()?.date
-        val lastDate = binding.calendarView.findLastVisibleDay()?.date
-
-        val oneWeekHeight = binding.calendarView.daySize.height
-        val oneMonthHeight = oneWeekHeight * 6
-
-        val oldHeight = if (monthToWeek) oneMonthHeight else oneWeekHeight
-        val newHeight = if (monthToWeek) oneWeekHeight else oneMonthHeight
-
-        val animator = ValueAnimator.ofInt(oldHeight, newHeight)
-        animator.addUpdateListener { animator ->
-            binding.calendarView.updateLayoutParams {
-                height = animator.animatedValue as Int
-            }
-        }
-
-        animator.doOnStart {
-            if (!monthToWeek) {
-                binding.calendarView.updateMonthConfiguration(
-                    inDateStyle = InDateStyle.ALL_MONTHS,
-                    maxRowCount = 6,
-                    hasBoundaries = true
-                )
-            }
-        }
-        animator.doOnEnd {
-            if (monthToWeek) {
-                binding.calendarView.updateMonthConfiguration(
-                    inDateStyle = InDateStyle.FIRST_MONTH,
-                    maxRowCount = 1,
-                    hasBoundaries = false
-                )
-            }
-
-            if (monthToWeek) {
-                binding.calendarView.scrollToDate(selectedDate)
-            } else {
-                if (firstDate!!.yearMonth == lastDate!!.yearMonth) {
-                    binding.calendarView.scrollToMonth(firstDate.yearMonth)
-                } else {
-                    binding.calendarView.scrollToMonth(
-                        minOf(
-                            selectedDate.yearMonth,
-                            YearMonth.now().plusMonths(10)
-                        )
-                    )
-                }
-            }
-        }
-        animator.duration = 250
-        animator.start()
     }
 
     override fun onDestroyView() {

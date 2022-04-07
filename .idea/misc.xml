@@ -156,7 +156,7 @@
         <entry key="app/src/main/res/layout/fragment_add_procedure.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_add_symptom.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_add_symptom_details.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_calendar_settings.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_dict.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18" />

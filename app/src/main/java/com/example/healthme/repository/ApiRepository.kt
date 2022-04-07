@@ -53,6 +53,10 @@ class ApiRepository {
         return RetrofitInstance.api.getAppointmentsToDate(token, date)
     }
 
+    suspend fun getAppointments(token: String): Response<List<Appointment>> {
+        return RetrofitInstance.api.getAppointments(token)
+    }
+
     suspend fun getClosetAppointments(token: String): Response<List<Appointment>> {
         return RetrofitInstance.api.getClosetAppointments(token)
     }

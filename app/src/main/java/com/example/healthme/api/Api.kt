@@ -55,6 +55,11 @@ interface Api {
         @Field("date") date: String
     ): Response<List<Appointment>>
 
+    @GET("api/appointment/")
+    suspend fun getAppointments(
+        @Header("Authorization") token: String
+    ): Response<List<Appointment>>
+
     @GET("api/appointments")
     suspend fun getClosetAppointments(@Header("Authorization") token: String)
     : Response<List<Appointment>>
