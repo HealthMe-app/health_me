@@ -234,7 +234,7 @@ class UpdateSymptomFragment : DialogFragment() {
         viewModel.updateNote(args.currentNoteID, ntype, name, dateTime, comment)
         viewModel.myResponseNote.observe(this, Observer { response ->
             if (response.isSuccessful) {
-                Toast.makeText(requireContext(), "Запись добавлена успешно", Toast.LENGTH_LONG)
+                Toast.makeText(requireContext(), "Запись изменена успешно", Toast.LENGTH_LONG)
                     .show()
                 dialog?.cancel()
             } else {
