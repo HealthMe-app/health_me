@@ -60,6 +60,7 @@ class TrackerFragment : Fragment() {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+        createCalendar()
         getNotes()
         getNotesToDate(today.toString())
 

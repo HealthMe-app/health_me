@@ -49,8 +49,6 @@ class CalendarFragment : Fragment() {
     private val today = LocalDate.now()
     private var selectedDate: LocalDate = today
     private var tagDatesList: MutableList<String> = mutableListOf()
-//    private val formatDate: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-M-d")
-//    private val formatDateServer: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -73,6 +71,7 @@ class CalendarFragment : Fragment() {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+        createCalendar()
         getAppointments()
         getAppointmentsToDate(today.toString())
 
